@@ -7,9 +7,13 @@ public class PlayerController : MonoBehaviour
 {
     public InputAction direction;
     public CharacterController controller;
+    public float speed;
+
+    Animator anim;
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
     }
 
     private void OnEnable()
@@ -28,10 +32,11 @@ public class PlayerController : MonoBehaviour
         Vector3 finalVector = new Vector3();
         finalVector.x = inputVector.x;
         finalVector.z = inputVector.y;
-        controller.Move(finalVector * Time.deltaTime * 3.14f);
+        controller.Move(finalVector * Time.deltaTime * speed);
         if (finalVector != Vector3.zero)
         {
             gameObject.transform.forward = finalVector;
         }
+        anim.SetFloat("speed", inputVector.magnitude);
     }
 }
