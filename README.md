@@ -2,11 +2,9 @@
 Coding
 Including Movements, Rotations, Jumps, Using items, Skills, Players State, Buffs, call UI etc.
 
-# Movements🚶‍🏃‍
+# Movements and Rotations🚶‍🏃‍
 4 Players and NPCs' movements
 Like Walking and Running
-
-# Rotations
 4 Players and NPCs' rotations
 360° rotations
 
