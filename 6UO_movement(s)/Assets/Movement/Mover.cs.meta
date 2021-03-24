@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:6UO_movement(s)/Assets/Movement/Mover.cs.meta
 guid: a42f5ff018cee6f45af1ed0704305265
+=======
+guid: a7233ca8b66e38e45b656c8b74947cbf
+>>>>>>> 86cb493fefff3661ff7ca1d4800f75aa758d8b53:6UO_movement(s)/Assets/Animation/MoveMotionPack/SampleScene/Scripts/PlayManager.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
