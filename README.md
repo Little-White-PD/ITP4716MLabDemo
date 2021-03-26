@@ -1,9 +1,8 @@
 # ITP4716M_Project
-Coding
-Including Movements, Rotations, Jumps, Using items, Skills, Players State, Buffs, call UI etc.
+Stay Home Safty by 6UO
 
-# Movements and Rotations🚶‍🏃‍
-4 Players and NPCs' movements<br/>
+# Scripts
+4 Players and NPCs' movements  
 Like Walking and Running  
 4 Players and NPCs' rotations  
 360° rotations  
