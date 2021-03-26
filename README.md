@@ -3,7 +3,6 @@ Stay Home Safty by 6UO
 
 # Scripts
 4 Players and NPCs' movements  
-Like Walking and Running  
 4 Players and NPCs' rotations  
 360° rotations  
 4 Players' Jumps  
