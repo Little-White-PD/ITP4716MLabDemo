@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ConvertToInfector : MonoBehaviour
 {
-
     public GameObject citizen;
     public Collider collider;
     public bool HaveBuff;
@@ -18,8 +17,17 @@ public class ConvertToInfector : MonoBehaviour
             collider.enabled = !collider.enabled;
             buff.Play();
         }
-    }    
- 
+    }
+
+    public void Update()
+    {
+        if (HaveBuff == false)
+        {
+            buff.Stop();
+            ColliderOpen();
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Infector" && citizen.tag != "Infector")
@@ -30,5 +38,13 @@ public class ConvertToInfector : MonoBehaviour
             buff.Play();
         }
     }
-        
+
+    void ColliderOpen()
+    {
+        if (citizen.tag == "Infector")
+        {
+            collider.enabled = true;
+            citizen.tag = "Citizens";
+        }
+    }
 }
