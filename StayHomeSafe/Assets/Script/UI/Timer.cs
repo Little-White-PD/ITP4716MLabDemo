@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
 
-	public float myTimer=10;
+	public float myTimer;
+	public GameObject Gameover;
 
 	Text text;
 
@@ -19,6 +20,18 @@ public class Timer : MonoBehaviour {
 			myTimer = 0;
 		}
 		text.text = (myTimer).ToString("00");
+
+		if(myTimer <= 10 && myTimer >= 0)
+        {
+			text.color = Color.red;
+        }
+
+		if(myTimer <= 0)
+        {
+			Time.timeScale = 0;
+			Gameover.SetActive(true);
+			text.enabled = false;
+        }
 	}
 }
 

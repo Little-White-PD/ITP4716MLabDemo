@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject Gameover;
 
     void Start()
     {
@@ -17,7 +18,8 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            
+                Time.timeScale = 0;
+                pauseMenu.SetActive(true);
         }
     }
 
