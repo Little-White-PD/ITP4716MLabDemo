@@ -1837,7 +1837,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448189314}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57c2851d84c6f1a40ae47cb8ea4ebcb9, type: 3}
   m_Name: 
@@ -2072,8 +2072,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fb618fb444f104aa04a04d08d627c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waittime: 7
-  isPowerUp: 0
 --- !u!114 &462391412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2090,8 +2088,22 @@ MonoBehaviour:
   collider: {fileID: 462391407}
   HaveBuff: 0
   buff: {fileID: 320653498}
-  waittime: 7
-  gasMask: 0
+  gasMaskTime: 20
+  MaskTime: 5
+  protectTime: 0
+  protect: 0
+--- !u!114 &462391413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462391405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7eff00fff95084e87aacbc76f55d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &485841220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2992,7 +3004,7 @@ PrefabInstance:
     - target: {fileID: 1046446337790263506, guid: 4e5d0daefaaf553449b490651cc7113a,
         type: 3}
       propertyPath: m_TagString
-      value: Infector
+      value: Citizens
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e5d0daefaaf553449b490651cc7113a, type: 3}
@@ -3108,20 +3120,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &745853518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745853512}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29fb618fb444f104aa04a04d08d627c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waittime: 7
-  isPowerUp: 0
 --- !u!114 &745853519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3138,8 +3136,10 @@ MonoBehaviour:
   collider: {fileID: 745853515}
   HaveBuff: 0
   buff: {fileID: 509866517}
-  waittime: 7
-  gasMask: 0
+  gasMaskTime: 20
+  MaskTime: 5
+  protectTime: 0
+  protect: 0
 --- !u!1 &753760828 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6136265123305066534, guid: b89023f07077bc144bf1daaa9749af81,
@@ -4907,8 +4907,10 @@ MonoBehaviour:
   collider: {fileID: 1392593872}
   HaveBuff: 0
   buff: {fileID: 1313322072}
-  waittime: 7
-  gasMask: 0
+  gasMaskTime: 20
+  MaskTime: 5
+  protectTime: 0
+  protect: 0
 --- !u!1 &1430430653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6136265123305066534, guid: b89023f07077bc144bf1daaa9749af81,
@@ -6605,8 +6607,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fb618fb444f104aa04a04d08d627c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waittime: 7
-  isPowerUp: 0
 --- !u!114 &1832208941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6623,8 +6623,22 @@ MonoBehaviour:
   collider: {fileID: 1832208938}
   HaveBuff: 0
   buff: {fileID: 65444570}
-  waittime: 7
-  gasMask: 0
+  gasMaskTime: 20
+  MaskTime: 5
+  protectTime: 0
+  protect: 0
+--- !u!114 &1832208942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832208934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7eff00fff95084e87aacbc76f55d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1847588402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4630247471093011311, guid: b89023f07077bc144bf1daaa9749af81,
@@ -9477,9 +9491,10 @@ GameObject:
   - component: {fileID: 1392593871}
   - component: {fileID: 1392593877}
   - component: {fileID: 3191221269693028535}
+  - component: {fileID: 3191221269693028536}
   m_Layer: 0
   m_Name: char_1
-  m_TagString: Citizens
+  m_TagString: Infector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9496,8 +9511,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fb618fb444f104aa04a04d08d627c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waittime: 7
-  isPowerUp: 0
+--- !u!114 &3191221269693028536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3191221269693028534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7eff00fff95084e87aacbc76f55d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3191221269693383894
 Transform:
   m_ObjectHideFlags: 0
@@ -10534,10 +10559,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5740151598861240852, guid: cae59724b864d614686220547432560d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5740151598861240853, guid: cae59724b864d614686220547432560d,
         type: 3}
       propertyPath: m_Name
       value: facemask
+      objectReference: {fileID: 0}
+    - target: {fileID: 5740151598861240853, guid: cae59724b864d614686220547432560d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Mask
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cae59724b864d614686220547432560d, type: 3}
@@ -11187,6 +11222,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: syringe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391231827534912979, guid: 985b0dfff78af0e43bd56b1f952acc7a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Syringe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7661616917254576439, guid: 985b0dfff78af0e43bd56b1f952acc7a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7915426553892685673, guid: 985b0dfff78af0e43bd56b1f952acc7a,
         type: 3}

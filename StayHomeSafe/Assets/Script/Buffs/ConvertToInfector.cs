@@ -9,8 +9,14 @@ public class ConvertToInfector : MonoBehaviour
     public bool HaveBuff;
     public ParticleSystem buff;
    
-    public float waittime = 7f;
-    public bool gasMask;
+    public float gasMaskTime = 20f;
+    public float MaskTime = 5f;
+
+
+    public float protectTime;
+    public bool protect;
+
+
 
     public void Start()
     {
@@ -29,31 +35,44 @@ public class ConvertToInfector : MonoBehaviour
             buff.Stop();
             ColliderOpen();
         }
+        if (protectTime > 0)
+        {
+            protect = true;
+            protectTime -= Time.deltaTime;
+        }
+        else protect = false;
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Infector" && citizen.tag != "Infector" && citizen.tag != "!gasMask")
+        if (other.tag == "Infector" && citizen.tag != "Infector" && !protect)
         {
-            HaveBuff = true;
-            citizen.tag = "Infector";
-            collider.enabled = !collider.enabled;
-            buff.Play();
+            if (other.GetComponent<ConvertToInfector>().protect == false)
+            {
+                HaveBuff = true;
+                citizen.tag = "Infector";
+                collider.enabled = !collider.enabled;
+                buff.Play();
+            }
         }
-        else if(other.GameObject.CompareTag("GasMask"))
+        else if(other.CompareTag("GasMask"))
         {
-            gasMask = true;
-
+            protectTime += gasMaskTime;
+            Destroy(other.gameObject);        
+        }
+        else if (other.CompareTag("Mask"))
+        {
+            protectTime += MaskTime;
             Destroy(other.gameObject);
-            StartCoroutine(PowerUpCountDown());
+        }
+        else if (other.CompareTag("Syringe"))
+        {
+            HaveBuff = false;
+            Destroy(other.gameObject);
         }
     }
 
-    IEnumerator PowerUpCountDown()
-    {
-        yield return new WaitForSeconds(waittime);
-        gasMask = false;
-    }
+
 
     void ColliderOpen()
     {

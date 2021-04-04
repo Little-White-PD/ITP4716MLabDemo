@@ -8,6 +8,7 @@ TagManager:
   - Infector
   - GasMask
   - Mask
+  - Syringe
   layers:
   - Default
   - TransparentFX
