@@ -12,6 +12,7 @@ public class ItemsSpawn : MonoBehaviour
     public float spawnLeastWait;
     public int startWait;
     public bool stop;
+    
 
     int randItem;
 
@@ -23,6 +24,7 @@ public class ItemsSpawn : MonoBehaviour
     void Update()
     {
         spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
+        Debug.Log(randItem);
     }
 
     IEnumerator waitSpawner()
@@ -31,7 +33,7 @@ public class ItemsSpawn : MonoBehaviour
 
         while (!stop)
         {
-            randItem = Random.Range(0, 2);
+            randItem = Random.Range(0, 3);
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 1, Random.Range(-spawnValues.z, spawnValues.z));
             Instantiate(items[randItem], spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation);
             yield return new WaitForSeconds(spawnWait);

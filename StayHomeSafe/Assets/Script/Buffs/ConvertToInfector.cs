@@ -18,6 +18,8 @@ public class ConvertToInfector : MonoBehaviour
 
 
 
+
+
     public void Start()
     {
         if (citizen.tag == "Infector")
@@ -58,7 +60,8 @@ public class ConvertToInfector : MonoBehaviour
         else if(other.CompareTag("GasMask"))
         {
             protectTime += gasMaskTime;
-            Destroy(other.gameObject);        
+            Destroy(other.gameObject);
+            
         }
         else if (other.CompareTag("Mask"))
         {
@@ -71,7 +74,6 @@ public class ConvertToInfector : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-
 
 
     void ColliderOpen()
