@@ -31,16 +31,16 @@ public class ConvertToInfector : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Infector" && citizen.tag != "Infector" && !gasMask)
+        if (other.tag == "Infector" && citizen.tag != "Infector" && citizen.tag != "!gasMask")
         {
             HaveBuff = true;
             citizen.tag = "Infector";
             collider.enabled = !collider.enabled;
             buff.Play();
         }
-        else if(other.CompareTag("GasMask"))
+        else if(other.GameObject.CompareTag("GasMask"))
         {
             gasMask = true;
 
