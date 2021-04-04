@@ -5,9 +5,12 @@ using UnityEngine;
 public class ConvertToInfector : MonoBehaviour
 {
     public GameObject citizen;
-    public Collider collider;
+    public CapsuleCollider collider;
     public bool HaveBuff;
     public ParticleSystem buff;
+   
+    public float waittime = 7f;
+    public bool gasMask;
 
     public void Start()
     {
@@ -30,13 +33,26 @@ public class ConvertToInfector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Infector" && citizen.tag != "Infector")
+        if (other.tag == "Infector" && citizen.tag != "Infector" && !gasMask)
         {
             HaveBuff = true;
             citizen.tag = "Infector";
             collider.enabled = !collider.enabled;
             buff.Play();
         }
+        else if(other.CompareTag("GasMask"))
+        {
+            gasMask = true;
+
+            Destroy(other.gameObject);
+            StartCoroutine(PowerUpCountDown());
+        }
+    }
+
+    IEnumerator PowerUpCountDown()
+    {
+        yield return new WaitForSeconds(waittime);
+        gasMask = false;
     }
 
     void ColliderOpen()
