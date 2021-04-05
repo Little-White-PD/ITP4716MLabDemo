@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CharManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] characters;
-    // Start is called before the first frame update
+
+    private int characterIndex;
     void Start()
     {
         
@@ -24,7 +27,13 @@ public class CharManager : MonoBehaviour
         {
             characters[i].SetActive(false);
         }
-
+        this.characterIndex = index;
         characters[index].SetActive(true);
+    }
+
+    public void startGame()
+    {
+        SceneManager.LoadScene("InGame");
+        PlayerPrefs.SetInt("CharacterIndex", characterIndex);
     }
 }

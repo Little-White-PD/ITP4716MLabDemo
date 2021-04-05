@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour {
 
 	void Start () {
 		text = GetComponent<Text>();
+		myTimer = PlayerPrefs.GetFloat("Time");
+		
 	}
 
 	void Update () {

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameStart : MonoBehaviour
 {
     public GameObject startgame;
+    public GameObject Stop;
     void Start()
     {
         Time.timeScale = 0;
@@ -18,6 +19,7 @@ public class GameStart : MonoBehaviour
         {
             Time.timeScale = 1;
             startgame.SetActive(false);
+            Stop.SetActive(true);
         }
     }
 }
