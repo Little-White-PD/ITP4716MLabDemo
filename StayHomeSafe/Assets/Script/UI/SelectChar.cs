@@ -7,6 +7,8 @@ public class SelectChar : MonoBehaviour
 {
     private int selectedCharacterIndex;
     private Color desiredColor;
+    private GameObject characterselect;
+    private GameObject timer;
 
     [Header("List of character")]
     [SerializeField] private List<CharacterSelectObject> characterList = new List<CharacterSelectObject>();
@@ -52,7 +54,6 @@ public class SelectChar : MonoBehaviour
 
     public void Confirm()
     {
-        Debug.Log(string.Format("Character {0}:{1} has been chosen", selectedCharacterIndex, characterList[selectedCharacterIndex].characterName));
     }
     private void UpdateCharacterSelectionUI()
     {
