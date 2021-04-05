@@ -1185,13 +1185,14 @@ GameObject:
   - component: {fileID: 5170813175980136352}
   - component: {fileID: 5170813175980136364}
   - component: {fileID: 5170813175980136358}
+  - component: {fileID: 3626303814651485863}
   m_Layer: 0
   m_Name: char_3
   m_TagString: Citizens
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4151250519827070080
 Transform:
   m_ObjectHideFlags: 0
@@ -1288,7 +1289,10 @@ MonoBehaviour:
       m_Action: Direction
       m_Flags: 0
   controller: {fileID: 5170813175980136354}
+  animatorHandler: {fileID: 0}
+  finalVector: {x: 0, y: 0, z: 0}
   speed: 10
+  rotationSpeed: 10
 --- !u!114 &5170813175980136358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,6 +1313,20 @@ MonoBehaviour:
   MaskTime: 5
   protectTime: 0
   protect: 0
+--- !u!114 &3626303814651485863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4151250519827226848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2455501f6312a024598dcc7094c70df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  canRotate: 0
 --- !u!1 &4151250519827226852
 GameObject:
   m_ObjectHideFlags: 0

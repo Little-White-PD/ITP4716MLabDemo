@@ -3287,6 +3287,7 @@ GameObject:
   - component: {fileID: 6542392171120156420}
   - component: {fileID: 6542392171120156440}
   - component: {fileID: 6542392171120156418}
+  - component: {fileID: -5255766473406170741}
   m_Layer: 0
   m_Name: char_2
   m_TagString: Infector
@@ -3422,7 +3423,10 @@ MonoBehaviour:
       m_Action: Direction
       m_Flags: 8
   controller: {fileID: 6542392171120156423}
+  animatorHandler: {fileID: 0}
+  finalVector: {x: 0, y: 0, z: 0}
   speed: 10
+  rotationSpeed: 10
 --- !u!114 &6542392171120156418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3443,6 +3447,20 @@ MonoBehaviour:
   MaskTime: 5
   protectTime: 0
   protect: 0
+--- !u!114 &-5255766473406170741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444673746368487205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2455501f6312a024598dcc7094c70df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  canRotate: 0
 --- !u!1 &444673746368487209
 GameObject:
   m_ObjectHideFlags: 0
