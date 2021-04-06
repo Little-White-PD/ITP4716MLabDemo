@@ -9,7 +9,7 @@ public class WeaponPickUp : Interactable
         public override void Interact(ConvertToInfector convertToInfector)
         {
             base.Interact(convertToInfector);
-        PickUpItem(convertToInfector);
+            PickUpItem(convertToInfector);
         }
 
         private void PickUpItem(ConvertToInfector convertToInfector)

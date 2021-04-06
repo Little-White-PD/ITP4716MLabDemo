@@ -62,7 +62,8 @@ public class ConvertToInfector : MonoBehaviour
         {
 
             protectTime += gasMaskTime;
-            GetComponent<Interactable>().Interact(this);
+            other.GetComponent<Interactable>().Interact(this);
+
             //Destroy(other.gameObject);
             
             
