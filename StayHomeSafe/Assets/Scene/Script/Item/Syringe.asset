@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemIcon: {fileID: 21300000, guid: 4023d1289d7496d45bd7583aff861aa3, type: 3}
   itemName: Syringe
-  modelPrefab: {fileID: 7391231827534912979, guid: 985b0dfff78af0e43bd56b1f952acc7a,
+  modelPrefab: {fileID: 6865710588068222242, guid: 26b296ca8500eec4c9d722caf5a0e023,
     type: 3}
   isUnarmed: 0
