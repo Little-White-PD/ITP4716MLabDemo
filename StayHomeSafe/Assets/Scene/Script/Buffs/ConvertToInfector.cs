@@ -72,12 +72,12 @@ public class ConvertToInfector : MonoBehaviour
         else if (other.CompareTag("Mask"))
         {
             protectTime += MaskTime;
-            Destroy(other.gameObject);
+            other.GetComponent<Interactable>().Interact(this);
         }
         else if (other.CompareTag("Syringe"))
         {
             HaveBuff = false;
-            Destroy(other.gameObject);
+            other.GetComponent<Interactable>().Interact(this);
         }
     }
 
