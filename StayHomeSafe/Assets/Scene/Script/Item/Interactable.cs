@@ -15,7 +15,7 @@ using UnityEngine;
             Gizmos.DrawWireSphere(transform.position, radius);
         }
 
-        public virtual void Interact(PlayerController playerController)
+        public virtual void Interact(ConvertToInfector convertToInfector)
         {
             Debug.Log("You interacted with an object!");
         }

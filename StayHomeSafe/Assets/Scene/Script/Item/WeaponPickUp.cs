@@ -6,18 +6,19 @@ public class WeaponPickUp : Interactable
     {
         public WeaponItem weapon;
 
-        public override void Interact(PlayerController playerController)
+        public override void Interact(ConvertToInfector convertToInfector)
         {
-            base.Interact(playerController);
+            base.Interact(convertToInfector);
+        PickUpItem(convertToInfector);
         }
 
-        private void PickUpItem(PlayerController playerController)
+        private void PickUpItem(ConvertToInfector convertToInfector)
         {
             PlayerInventory playerInventory;
             AnimatorHandler animatorHandler;
 
-            playerInventory = playerController.GetComponent<PlayerInventory>();
-            animatorHandler = playerController.GetComponentInChildren<AnimatorHandler>();
+            playerInventory = convertToInfector.GetComponent<PlayerInventory>();
+            animatorHandler = convertToInfector.GetComponentInChildren<AnimatorHandler>();
 
             
             playerInventory.weaponsInventory.Add(weapon);
