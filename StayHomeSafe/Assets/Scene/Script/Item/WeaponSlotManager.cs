@@ -40,6 +40,8 @@ using UnityEngine;
                 rightHandSlot.LoadWeaponModel(weaponItem);
                 quickSlotsUI.UpdateWeaponQuickSlotsUI(false, weaponItem);
             }
+
+
         }
 
     }

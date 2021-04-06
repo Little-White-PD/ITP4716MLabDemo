@@ -9,6 +9,7 @@ using UnityEngine.InputSystem;
         public InputAction direction;
         public CharacterController controller;
         public AnimatorHandler animatorHandler;
+        public PlayerInventory playerInventory;
 
         public Vector3 finalVector;
         public float speed;
@@ -16,7 +17,12 @@ using UnityEngine.InputSystem;
         private float gravityValue = -9.81f;
 
         Animator anim;
-        private void Start()
+
+    private void Awake()
+    {
+        playerInventory = GetComponent<PlayerInventory>();
+    }
+    private void Start()
         {
             controller = GetComponent<CharacterController>();
             anim = GetComponent<Animator>();
@@ -34,8 +40,15 @@ using UnityEngine.InputSystem;
             direction.Disable();
         }
 
-        private void FixedUpdate()
+    private void Update()
+    {
+        HandleQuickSlotsInput();
+    }
+
+    private void FixedUpdate()
         {
+        
+
             Vector2 inputVector = direction.ReadValue<Vector2>();
             finalVector.x = inputVector.x;
             finalVector.z = inputVector.y;
@@ -59,6 +72,23 @@ using UnityEngine.InputSystem;
                 gameObject.transform.rotation = targetRotation;
             }
             anim.SetFloat("speed", inputVector.magnitude);
+
+        
+    }
+
+    private void HandleQuickSlotsInput()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            
+            playerInventory.ChangeRightWeapon();
+
+        }
+        if (Input.GetButtonDown("Fire2"))
+        {
+
+            playerInventory.ChangeLeftWeapon();
         }
     }
+}
 
