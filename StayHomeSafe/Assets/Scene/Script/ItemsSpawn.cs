@@ -24,7 +24,6 @@ public class ItemsSpawn : MonoBehaviour
     void Update()
     {
         spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
-        Debug.Log(randItem);
     }
 
     IEnumerator waitSpawner()

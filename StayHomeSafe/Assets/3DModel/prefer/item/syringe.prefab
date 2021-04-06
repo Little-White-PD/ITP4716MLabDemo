@@ -140,6 +140,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 3813486266117642441, guid: 4507fbd9aa9b47540ba602ba01ef136c,
     type: 3}
+  gasMaskTime: 20
+  maskTime: 5
+  name: Syringe
 --- !u!1 &7661616917100822197
 GameObject:
   m_ObjectHideFlags: 0

@@ -79,6 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 4007238470975915965, guid: 246f1b37684ada94fae2369ba0c93601,
     type: 3}
+  name: FaceMask
 --- !u!1001 &5740151598250121066
 PrefabInstance:
   m_ObjectHideFlags: 0

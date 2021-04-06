@@ -9,14 +9,12 @@ public class ConvertToInfector : MonoBehaviour
     public CapsuleCollider collider;
     public bool HaveBuff;
     public ParticleSystem buff;
-   
-    public float gasMaskTime = 20f;
-    public float MaskTime = 5f;
 
+    public float gasMaskTime = 20f;
+    public float maskTime = 5f;
 
     public float protectTime;
     public bool protect;
-
 
     public void Start()
     {
@@ -26,6 +24,8 @@ public class ConvertToInfector : MonoBehaviour
             collider.enabled = !collider.enabled;
             buff.Play();
         }
+
+
     }
 
     public void Update()
@@ -41,6 +41,8 @@ public class ConvertToInfector : MonoBehaviour
             protectTime -= Time.deltaTime;
         }
         else protect = false;
+
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -55,27 +57,6 @@ public class ConvertToInfector : MonoBehaviour
                 buff.Play();
             }
         }
-        /*else if(other.CompareTag("GasMask"))
-        {
-
-            protectTime += gasMaskTime;
-            //other.GetComponent<Interactable>().Interact(this);
-
-            //Destroy(other.gameObject);
-            
-            
-            
-        }
-        else if (other.CompareTag("Mask"))
-        {
-            protectTime += MaskTime;
-            //other.GetComponent<Interactable>().Interact(this);
-        }
-        else if (other.CompareTag("Syringe"))
-        {
-            HaveBuff = false;
-            //other.GetComponent<Interactable>().Interact(this);
-        }*/
     }
 
 
@@ -87,5 +68,7 @@ public class ConvertToInfector : MonoBehaviour
             citizen.tag = "Citizens";
         }
     }
+
+
 }
 
