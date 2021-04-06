@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SG
-{
+
     public class WeaponSlotManager : MonoBehaviour
     {
         WeaponHolderSlot leftHandSlot;
         WeaponHolderSlot rightHandSlot;
 
+        QuickSlotsUI quickSlotsUI;
         private void Awake()
         {
+            quickSlotsUI = FindObjectOfType<QuickSlotsUI>();
 
             WeaponHolderSlot[] weaponHolderSlots = GetComponentsInChildren<WeaponHolderSlot>();
             foreach (WeaponHolderSlot weaponSlot in weaponHolderSlots)
@@ -31,15 +32,17 @@ namespace SG
             if (isLeft)
             {
                 leftHandSlot.LoadWeaponModel(weaponItem);
+                quickSlotsUI.UpdateWeaponQuickSlotsUI(true, weaponItem);
 
             }
             else
             {
                 rightHandSlot.LoadWeaponModel(weaponItem);
+                quickSlotsUI.UpdateWeaponQuickSlotsUI(false, weaponItem);
             }
         }
 
     }
-}
+
 
         

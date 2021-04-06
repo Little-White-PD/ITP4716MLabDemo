@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SG
-{
+
     public class PlayerInventory : MonoBehaviour
     {
         WeaponSlotManager weaponSlotManager;
 
         public WeaponItem rightWeapon;
         public WeaponItem leftWeapon;
+        public WeaponItem unarmedWeapon;
+
+        public List<WeaponItem> weaponsInventory;
 
         private void Awake()
         {
@@ -23,4 +25,4 @@ namespace SG
             weaponSlotManager.LoadWeaponOnSlot(leftWeapon, true);
         }
     }
-}
+

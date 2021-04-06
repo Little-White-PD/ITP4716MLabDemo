@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ConvertToInfector : MonoBehaviour
 {
     public GameObject citizen;
@@ -16,8 +17,8 @@ public class ConvertToInfector : MonoBehaviour
     public float protectTime;
     public bool protect;
 
-
-
+    public WeaponItem weapon;
+    PlayerInventory playerInventory;
 
 
     public void Start()
@@ -59,8 +60,12 @@ public class ConvertToInfector : MonoBehaviour
         }
         else if(other.CompareTag("GasMask"))
         {
+
             protectTime += gasMaskTime;
+            
             Destroy(other.gameObject);
+            
+            
             
         }
         else if (other.CompareTag("Mask"))
@@ -85,3 +90,4 @@ public class ConvertToInfector : MonoBehaviour
         }
     }
 }
+
