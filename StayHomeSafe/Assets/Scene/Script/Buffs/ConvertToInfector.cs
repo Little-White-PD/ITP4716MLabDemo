@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,12 +10,21 @@ public class ConvertToInfector : MonoBehaviour
     public CapsuleCollider collider;
     public bool HaveBuff;
     public ParticleSystem buff;
+    private Inventory inventory;
 
     public float gasMaskTime = 20f;
     public float maskTime = 5f;
 
+    public bool mask;
+    public bool gasMask;
+
     public float protectTime;
     public bool protect;
+
+    private void Awake()
+    {
+        inventory = GetComponentInChildren<Inventory>();
+    }
 
     public void Start()
     {
@@ -35,13 +45,12 @@ public class ConvertToInfector : MonoBehaviour
             buff.Stop();
             ColliderOpen();
         }
-        if (protectTime > 0)
+       if (protectTime > 0)
         {
             protect = true;
             protectTime -= Time.deltaTime;
         }
         else protect = false;
-
 
     }
 
@@ -68,6 +77,8 @@ public class ConvertToInfector : MonoBehaviour
             citizen.tag = "Citizens";
         }
     }
+
+
 
 
 }
