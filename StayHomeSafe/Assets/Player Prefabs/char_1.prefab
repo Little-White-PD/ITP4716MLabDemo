@@ -3006,6 +3006,7 @@ MonoBehaviour:
   MaskTime: 5
   protectTime: 0
   protect: 0
+  weapon: {fileID: 0}
 --- !u!114 &-4826919459628675846
 MonoBehaviour:
   m_ObjectHideFlags: 0
