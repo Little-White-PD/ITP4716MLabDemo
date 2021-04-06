@@ -9,7 +9,6 @@ using UnityEngine.InputSystem;
         public InputAction direction;
         public CharacterController controller;
         public AnimatorHandler animatorHandler;
-        public PlayerInventory playerInventory;
 
         public Vector3 finalVector;
         public float speed;
@@ -20,7 +19,7 @@ using UnityEngine.InputSystem;
 
     private void Awake()
     {
-        playerInventory = GetComponent<PlayerInventory>();
+
     }
     private void Start()
         {
@@ -81,13 +80,13 @@ using UnityEngine.InputSystem;
         if (Input.GetButtonDown("Fire1"))
         {
             
-            playerInventory.ChangeRightWeapon();
+            //playerInventory.ChangeRightWeapon();
 
         }
         if (Input.GetButtonDown("Fire2"))
         {
 
-            playerInventory.ChangeLeftWeapon();
+            //playerInventory.ChangeLeftWeapon();
         }
     }
 

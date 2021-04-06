@@ -17,9 +17,6 @@ public class ConvertToInfector : MonoBehaviour
     public float protectTime;
     public bool protect;
 
-    public WeaponItem weapon;
-    PlayerInventory playerInventory;
-
 
     public void Start()
     {
@@ -58,11 +55,11 @@ public class ConvertToInfector : MonoBehaviour
                 buff.Play();
             }
         }
-        else if(other.CompareTag("GasMask"))
+        /*else if(other.CompareTag("GasMask"))
         {
 
             protectTime += gasMaskTime;
-            other.GetComponent<Interactable>().Interact(this);
+            //other.GetComponent<Interactable>().Interact(this);
 
             //Destroy(other.gameObject);
             
@@ -72,13 +69,13 @@ public class ConvertToInfector : MonoBehaviour
         else if (other.CompareTag("Mask"))
         {
             protectTime += MaskTime;
-            other.GetComponent<Interactable>().Interact(this);
+            //other.GetComponent<Interactable>().Interact(this);
         }
         else if (other.CompareTag("Syringe"))
         {
             HaveBuff = false;
-            other.GetComponent<Interactable>().Interact(this);
-        }
+            //other.GetComponent<Interactable>().Interact(this);
+        }*/
     }
 
 

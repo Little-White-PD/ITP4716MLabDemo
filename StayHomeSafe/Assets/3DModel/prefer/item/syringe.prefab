@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7915426553892685673}
   - component: {fileID: 7661616917254576439}
-  - component: {fileID: -1327788613753587442}
+  - component: {fileID: 1327025258770800760}
   m_Layer: 0
   m_Name: syringe
   m_TagString: Syringe
@@ -126,7 +126,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-1327788613753587442
+--- !u!114 &1327025258770800760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,12 +135,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7391231827534912979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a023afec75c514248ac5d4f2a000444c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4323e15d85087ef4c8b34046ce44fc45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.6
-  interactbleText: 
-  weapon: {fileID: 11400000, guid: aeb1c75fa1496a749ba7f66dd99369c5, type: 2}
+  itemButton: {fileID: 3813486266117642441, guid: 4507fbd9aa9b47540ba602ba01ef136c,
+    type: 3}
 --- !u!1 &7661616917100822197
 GameObject:
   m_ObjectHideFlags: 0

@@ -328,7 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9028429158276600103}
   - component: {fileID: 9028429158276600102}
-  - component: {fileID: 4930604529405062886}
+  - component: {fileID: 4725502293540435053}
   m_Layer: 0
   m_Name: gasmask
   m_TagString: GasMask
@@ -364,7 +364,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4930604529405062886
+--- !u!114 &4725502293540435053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -373,12 +373,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9028429158276600101}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a023afec75c514248ac5d4f2a000444c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4323e15d85087ef4c8b34046ce44fc45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.6
-  interactbleText: 
-  weapon: {fileID: 11400000, guid: 14a6e58f67e3ce747b5a3329bd05d714, type: 2}
+  itemButton: {fileID: 1137014346103015323, guid: bf4893783bd085a4195f92b5032db40e,
+    type: 3}
 --- !u!1 &9028429158806571681
 GameObject:
   m_ObjectHideFlags: 0
