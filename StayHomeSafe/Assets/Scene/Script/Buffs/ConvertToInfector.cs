@@ -25,28 +25,30 @@ public class ConvertToInfector : MonoBehaviour
     private void Awake()
     {
         inventory = GetComponentInChildren<Inventory>();
+        buff.Play();
     }
 
     public void Start()
     {
-        if (citizen.tag == "Infector")
-        {
-            HaveBuff = true;
-            collider.enabled = !collider.enabled;
-            buff.Play();
-        }
 
 
     }
+
 
     public void Update()
     {
         if (HaveBuff == false)
         {
             buff.Stop();
-            ColliderOpen();
         }
-       if (protectTime > 0)
+
+        else if (HaveBuff == true && !buff.isPlaying)
+        {
+            buff.Play();
+        }
+
+
+        if (protectTime > 0)
         {
             protect = true;
             protectTime -= Time.deltaTime;
@@ -54,18 +56,18 @@ public class ConvertToInfector : MonoBehaviour
         else protect = false;
 
 
+
     }
 
     public void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Infector" && citizen.tag != "Infector" && !protect)
+        //if (other.tag == "Infector" && citizen.tag != "Infector" && !protect)
+        if(HaveBuff == true)
         {
             if (other.GetComponent<ConvertToInfector>().protect == false)
             {
-                HaveBuff = true;
-                citizen.tag = "Infector";
-                collider.enabled = !collider.enabled;
-                buff.Play();
+                other.GetComponent<ConvertToInfector>().HaveBuff = true;
+
             }
         }
         if (useSyringe == true)
@@ -80,14 +82,14 @@ public class ConvertToInfector : MonoBehaviour
     }
 
 
-    void ColliderOpen()
+   /* void ColliderOpen()
     {
         if (citizen.tag == "Infector")
         {
             collider.enabled = true;
             citizen.tag = "Citizens";
         }
-    }
+    }*/
 
 
 

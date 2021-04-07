@@ -536,6 +536,7 @@ MonoBehaviour:
   maskTime: 5
   mask: 0
   gasMask: 0
+  useSyringe: 0
   protectTime: 0
   protect: 0
 --- !u!143 &61374694
@@ -9280,6 +9281,11 @@ PrefabInstance:
       propertyPath: rotationSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4800168110465427796, guid: d0c8ad89842df3748a9000883c0f2038,
+        type: 3}
+      propertyPath: HaveBuff
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7986256120283609655, guid: d0c8ad89842df3748a9000883c0f2038,
         type: 3}
       propertyPath: m_Name
@@ -9645,6 +9651,11 @@ PrefabInstance:
     - target: {fileID: 444673746368487205, guid: 5266204076001be42a3938c5fc4f8a29,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542392171120156418, guid: 5266204076001be42a3938c5fc4f8a29,
+        type: 3}
+      propertyPath: HaveBuff
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6542392171120156440, guid: 5266204076001be42a3938c5fc4f8a29,
