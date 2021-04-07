@@ -62,7 +62,7 @@ public class ConvertToInfector : MonoBehaviour
     public void OnTriggerStay(Collider other)
     {
         //if (other.tag == "Infector" && citizen.tag != "Infector" && !protect)
-        if(HaveBuff == true)
+        if(HaveBuff == true && protect == false)
         {
             if (other.GetComponent<ConvertToInfector>().protect == false)
             {
@@ -70,13 +70,14 @@ public class ConvertToInfector : MonoBehaviour
 
             }
         }
-        if (useSyringe == true)
+        if (useSyringe == true &&other.tag == "NPC")
         {
 
                 other.GetComponent<ConvertToInfector>().HaveBuff = false;
                             useSyringe = false;
             
         }
+        
         
         
     }

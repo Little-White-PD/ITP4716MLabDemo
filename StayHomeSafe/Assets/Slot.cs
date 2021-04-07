@@ -12,8 +12,13 @@ public class Slot : MonoBehaviour
     public int i;
 
 
-    private void Update()
+    private void FixedUpdate()
     {
+        if (Input.GetKeyDown(key))
+        {
+            button.onClick.Invoke();
+        }
+
         if (transform.childCount <= 0)
         {
             if (inventory.itemName[i] == "GasMask")
@@ -24,14 +29,14 @@ public class Slot : MonoBehaviour
                 inventory.itemName[i] = null;
             }
 
-            else if (inventory.itemName[i] == "FaceMask")
+            if (inventory.itemName[i] == "FaceMask")
             {
                 convertToInfector.mask = false;
                 convertToInfector.protectTime += convertToInfector.maskTime;
                 inventory.isFull[i] = false;
                 inventory.itemName[i] = null;
             }
-            else if (inventory.itemName[i] == "Syringe")
+            if (inventory.itemName[i] == "Syringe")
             {
                 if (convertToInfector.HaveBuff == true)
                 {
@@ -48,6 +53,7 @@ public class Slot : MonoBehaviour
                     inventory.itemName[i] = null;
                 }
             }
+
         }
 
 
@@ -55,13 +61,13 @@ public class Slot : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+   /*private void FixedUpdate()
     {
         if (Input.GetKeyDown(key))
         {
             button.onClick.Invoke();
         }
-    }
+    }*/
 
     public void DropItem()
     {

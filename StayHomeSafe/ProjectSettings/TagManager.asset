@@ -9,6 +9,7 @@ TagManager:
   - GasMask
   - Mask
   - Syringe
+  - NPC
   layers:
   - Default
   - TransparentFX
