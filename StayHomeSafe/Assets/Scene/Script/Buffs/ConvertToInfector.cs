@@ -17,6 +17,7 @@ public class ConvertToInfector : MonoBehaviour
 
     public bool mask;
     public bool gasMask;
+    public bool useSyringe;
 
     public float protectTime;
     public bool protect;
@@ -52,9 +53,10 @@ public class ConvertToInfector : MonoBehaviour
         }
         else protect = false;
 
+
     }
 
-    private void OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.tag == "Infector" && citizen.tag != "Infector" && !protect)
         {
@@ -66,6 +68,15 @@ public class ConvertToInfector : MonoBehaviour
                 buff.Play();
             }
         }
+        if (useSyringe == true)
+        {
+
+                other.GetComponent<ConvertToInfector>().HaveBuff = false;
+                            useSyringe = false;
+            
+        }
+        
+        
     }
 
 

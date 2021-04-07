@@ -31,20 +31,19 @@ public class Slot : MonoBehaviour
                 inventory.isFull[i] = false;
                 inventory.itemName[i] = null;
             }
-            else
-           {
-
-               if (convertToInfector.collider.tag == "Infector")
+            else if (inventory.itemName[i] == "Syringe")
+            {
+                if (convertToInfector.HaveBuff == true)
                 {
-                    Debug.Log("Is Touching");
-
-                    convertToInfector.collider.GetComponent<ConvertToInfector>().HaveBuff = false;
+                    convertToInfector.HaveBuff = false;
                     inventory.isFull[i] = false;
                     inventory.itemName[i] = null;
                 }
                 else
                 {
-                    convertToInfector.HaveBuff = false;
+                    convertToInfector.useSyringe = true;
+
+
                     inventory.isFull[i] = false;
                     inventory.itemName[i] = null;
                 }
