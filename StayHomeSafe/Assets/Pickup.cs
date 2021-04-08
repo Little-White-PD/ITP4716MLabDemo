@@ -25,7 +25,7 @@ public class Pickup : MonoBehaviour
                         Instantiate(itemButton, inventory.slots[i].transform, false);
                         Destroy(gameObject);
 
-                        if (name == "FaceMask" && playerBeg.mask == false)
+                        if (name == "FaceMask" )
                         {
                             inventory.itemName[i] = "FaceMask";
                             playerBeg.mask = true;
