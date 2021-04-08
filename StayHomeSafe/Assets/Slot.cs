@@ -38,20 +38,12 @@ public class Slot : MonoBehaviour
             }
             if (inventory.itemName[i] == "Syringe")
             {
-                if (convertToInfector.HaveBuff == true)
-                {
-                    convertToInfector.HaveBuff = false;
+
+                convertToInfector.useSyringe = true;
                     inventory.isFull[i] = false;
                     inventory.itemName[i] = null;
-                }
-                else
-                {
-                    convertToInfector.useSyringe = true;
-
-
-                    inventory.isFull[i] = false;
-                    inventory.itemName[i] = null;
-                }
+                
+               
             }
 
         }

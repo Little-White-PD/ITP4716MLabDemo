@@ -55,6 +55,14 @@ public class ConvertToInfector : MonoBehaviour
         }
         else protect = false;
 
+        if (useSyringe == true)
+        {
+            HaveBuff = false;
+        }
+        if (HaveBuff == false)
+        {
+            useSyringe = false;
+        }
 
 
     }
@@ -83,14 +91,14 @@ public class ConvertToInfector : MonoBehaviour
     }
 
 
-   /* void ColliderOpen()
-    {
-        if (citizen.tag == "Infector")
-        {
-            collider.enabled = true;
-            citizen.tag = "Citizens";
-        }
-    }*/
+    /* void ColliderOpen()
+     {
+         if (citizen.tag == "Infector")
+         {
+             collider.enabled = true;
+             citizen.tag = "Citizens";
+         }
+     }*/
 
 
 
