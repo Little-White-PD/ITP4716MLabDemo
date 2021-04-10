@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Citizens
+  - Infector
+  - GasMask
+  - Mask
+  - Syringe
+  - NPC
+  - location1
+  - location2
+  - location3
   layers:
   - Default
   - TransparentFX

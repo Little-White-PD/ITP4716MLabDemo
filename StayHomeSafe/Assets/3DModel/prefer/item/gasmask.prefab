@@ -328,9 +328,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9028429158276600103}
   - component: {fileID: 9028429158276600102}
+  - component: {fileID: 4725502293540435053}
   m_Layer: 0
   m_Name: gasmask
-  m_TagString: Untagged
+  m_TagString: GasMask
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -358,11 +359,28 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9028429158276600101}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4725502293540435053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9028429158276600101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4323e15d85087ef4c8b34046ce44fc45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemButton: {fileID: 1137014346103015323, guid: bf4893783bd085a4195f92b5032db40e,
+    type: 3}
+  gasMaskTime: 20
+  maskTime: 5
+  name: GasMask
 --- !u!1 &9028429158806571681
 GameObject:
   m_ObjectHideFlags: 0
