@@ -6,6 +6,7 @@ public class PathFinding : MonoBehaviour
 {
 
 	NavMeshAgent NM;
+<<<<<<< HEAD
 	public ConvertToInfector convert;
 	public float distance;
 	public int randComponent;
@@ -46,4 +47,39 @@ public class PathFinding : MonoBehaviour
 			Destroy(gameObject);
     }
 	
+=======
+	Transform Player;
+	public ConvertToInfector convert;
+	
+
+	void Start()
+	{
+		NM = GetComponent<NavMeshAgent>();
+		
+	}
+
+	void Update()
+	{
+		if (convert.citizen.tag == "Infector")
+		{
+			Player = GameObject.FindWithTag("Citizens").transform;
+			NM.SetDestination(Player.position);
+
+		}
+		else
+		{
+
+			Player = GameObject.FindWithTag("GasMask").transform;
+			NM.SetDestination(Player.position);
+			Player = GameObject.FindWithTag("Mask").transform;
+			NM.SetDestination(Player.position);
+
+			
+
+		}	
+			
+		Player = GameObject.FindWithTag("Syringe").transform;
+			NM.SetDestination(Player.position);
+	}
+>>>>>>> f8204a62b7f010aa535d4677c4157d25e12f4886
 }

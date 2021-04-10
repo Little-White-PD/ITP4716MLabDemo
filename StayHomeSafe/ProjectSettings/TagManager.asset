@@ -10,9 +10,12 @@ TagManager:
   - Mask
   - Syringe
   - NPC
+<<<<<<< HEAD
   - location1
   - location2
   - location3
+=======
+>>>>>>> f8204a62b7f010aa535d4677c4157d25e12f4886
   layers:
   - Default
   - TransparentFX

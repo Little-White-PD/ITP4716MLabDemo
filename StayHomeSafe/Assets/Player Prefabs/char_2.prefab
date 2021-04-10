@@ -3424,6 +3424,10 @@ MonoBehaviour:
       m_Flags: 8
   controller: {fileID: 6542392171120156423}
   animatorHandler: {fileID: 0}
+<<<<<<< HEAD
+=======
+  playerInventory: {fileID: 0}
+>>>>>>> f8204a62b7f010aa535d4677c4157d25e12f4886
   finalVector: {x: 0, y: 0, z: 0}
   speed: 10
   rotationSpeed: 10
@@ -3444,12 +3448,19 @@ MonoBehaviour:
   HaveBuff: 0
   buff: {fileID: 6542392170820012673}
   gasMaskTime: 20
+<<<<<<< HEAD
   maskTime: 5
   mask: 0
   gasMask: 0
   useSyringe: 0
   protectTime: 0
   protect: 0
+=======
+  MaskTime: 5
+  protectTime: 0
+  protect: 0
+  weapon: {fileID: 0}
+>>>>>>> f8204a62b7f010aa535d4677c4157d25e12f4886
 --- !u!114 &-5255766473406170741
 MonoBehaviour:
   m_ObjectHideFlags: 0

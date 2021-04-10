@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:StayHomeSafe/Assets/Inventory.cs.meta
 guid: 27b0d8bc61666274689d2009069a2e79
+=======
+guid: fe59b807b5617e54b9916b6071f070d4
+>>>>>>> f8204a62b7f010aa535d4677c4157d25e12f4886:StayHomeSafe/Assets/Item.cs.meta
+=======
+guid: 27b0d8bc61666274689d2009069a2e79
+>>>>>>> f8204a62b7f010aa535d4677c4157d25e12f4886
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
