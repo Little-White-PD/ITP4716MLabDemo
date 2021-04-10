@@ -17,7 +17,7 @@ public class AnimatorHandler : MonoBehaviour
     public void Initialize()
     {
 
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
 
         vertical = Animator.StringToHash("Vertical");
         horizontal = Animator.StringToHash("Horizontal");

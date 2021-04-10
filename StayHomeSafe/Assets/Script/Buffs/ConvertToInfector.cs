@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class ConvertToInfector : MonoBehaviour
 {
-    public GameObject citizen;
     public CapsuleCollider collider;
     public bool HaveBuff;
     public ParticleSystem buff;
@@ -30,7 +29,7 @@ public class ConvertToInfector : MonoBehaviour
 
     public void Start()
     {
-
+        collider = GetComponent<CapsuleCollider>();
 
     }
 

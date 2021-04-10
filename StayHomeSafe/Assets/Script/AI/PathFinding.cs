@@ -27,17 +27,17 @@ public class PathFinding : MonoBehaviour
 			convert.HaveBuff = true;
 		else
 			convert.HaveBuff = false;
+		
+	}
+
+	void Update()
+	{		
 		if (randLocation == 0)
 			NM.SetDestination(GameObject.FindWithTag("location1").transform.position);
 		else if(randLocation == 1)
 			NM.SetDestination(GameObject.FindWithTag("location2").transform.position);
 		else
 			NM.SetDestination(GameObject.FindWithTag("location3").transform.position);
-	}
-
-	void Update()
-	{		
-		
 	}
 
     private void OnTriggerEnter(Collider other)

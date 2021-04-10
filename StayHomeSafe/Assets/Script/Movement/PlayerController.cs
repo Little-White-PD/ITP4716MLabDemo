@@ -23,9 +23,9 @@ using UnityEngine.InputSystem;
     }
     private void Start()
         {
-            controller = GetComponent<CharacterController>();
-            anim = GetComponent<Animator>();
-            animatorHandler = GetComponent<AnimatorHandler>();
+            controller = GetComponentInChildren<CharacterController>();
+            anim = GetComponentInChildren<Animator>();
+            animatorHandler = GetComponentInChildren<AnimatorHandler>();
             animatorHandler.Initialize();
         }
 
