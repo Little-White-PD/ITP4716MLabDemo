@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class CharManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] characters;
+    public GameObject[] characters;
 
-    private int characterIndex;
+    public int characterIndex;
     void Start()
     {
         
@@ -23,12 +23,8 @@ public class CharManager : MonoBehaviour
 
     public void ChangeCharacter(int index)
     {
-        for(int i = 0;i < characters.Length;i++)
-        {
-            characters[i].SetActive(false);
-        }
         this.characterIndex = index;
-        characters[index].SetActive(true);
+        //characters[index].SetActive(true);
     }
 
     public void startGame()

@@ -129,7 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a085dfce342e956419f6e9e91b91e5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  citizen: {fileID: 0}
   collider: {fileID: 0}
   HaveBuff: 0
   buff: {fileID: 6631906021504217409}
@@ -208,6 +207,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character:
+  - {fileID: 7986256120283609655, guid: d0c8ad89842df3748a9000883c0f2038, type: 3}
+  - {fileID: 444673746368487205, guid: 5266204076001be42a3938c5fc4f8a29, type: 3}
+  - {fileID: 4151250519827226848, guid: 0e927e63841ea664abd812f1096986b4, type: 3}
+  - {fileID: 9198638147508100948, guid: 64dd560ee42bfdf40b26ab0a762216e1, type: 3}
+  characterPrefabs:
   - {fileID: 7986256120283609655, guid: d0c8ad89842df3748a9000883c0f2038, type: 3}
   - {fileID: 444673746368487205, guid: 5266204076001be42a3938c5fc4f8a29, type: 3}
   - {fileID: 4151250519827226848, guid: 0e927e63841ea664abd812f1096986b4, type: 3}
