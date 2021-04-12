@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8862429075891771890}
   - component: {fileID: 1111544128968523098}
   - component: {fileID: 1111544128968523099}
+  - component: {fileID: 8551450961439497682}
   - component: {fileID: -6253775871765562936}
   m_Layer: 0
   m_Name: Player2
@@ -148,7 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a085dfce342e956419f6e9e91b91e5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  citizen: {fileID: 8156757845628970933}
   collider: {fileID: 1111544128280842484}
   HaveBuff: 0
   buff: {fileID: 1111544127486677439}
@@ -210,7 +210,7 @@ MonoBehaviour:
   - 
   - 
   - 
---- !u!114 &-6253775871765562936
+--- !u!114 &8551450961439497682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,14 +219,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 8156757845628970933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 143f2dd2c7625554784fcfcedfc9a9a1, type: 3}
+  m_Script: {fileID: 11500000, guid: c9e1d84a8d841ea47814e52cc72219ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character:
+  characterPrefabs:
   - {fileID: 7986256120283609655, guid: d0c8ad89842df3748a9000883c0f2038, type: 3}
   - {fileID: 444673746368487205, guid: 5266204076001be42a3938c5fc4f8a29, type: 3}
   - {fileID: 4151250519827226848, guid: 0e927e63841ea664abd812f1096986b4, type: 3}
   - {fileID: 9198638147508100948, guid: 64dd560ee42bfdf40b26ab0a762216e1, type: 3}
+--- !u!114 &-6253775871765562936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8156757845628970933}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143f2dd2c7625554784fcfcedfc9a9a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterPrefabs: []
 --- !u!1001 &1111544127472651901
 PrefabInstance:
   m_ObjectHideFlags: 0

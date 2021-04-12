@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 706305708292116620}
   - component: {fileID: 706305708292116623}
   - component: {fileID: 706305708292116610}
+  - component: {fileID: 7028000898110215161}
   - component: {fileID: 706305708292116616}
   - component: {fileID: 706305707604589857}
   - component: {fileID: 706305707604589856}
@@ -103,6 +104,19 @@ MonoBehaviour:
   finalVector: {x: 0, y: 0, z: 0}
   speed: 10
   rotationSpeed: 10
+--- !u!114 &7028000898110215161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616250548788963278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d9a79e2d2617b4db43b1d5b0446785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterPrefabs: []
 --- !u!114 &706305708292116616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a085dfce342e956419f6e9e91b91e5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  citizen: {fileID: 8616250548788963278}
   collider: {fileID: 706305708292116623}
   HaveBuff: 0
   buff: {fileID: 706305709084447172}
@@ -175,11 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143f2dd2c7625554784fcfcedfc9a9a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character:
-  - {fileID: 7986256120283609655, guid: d0c8ad89842df3748a9000883c0f2038, type: 3}
-  - {fileID: 444673746368487205, guid: 5266204076001be42a3938c5fc4f8a29, type: 3}
-  - {fileID: 4151250519827226848, guid: 0e927e63841ea664abd812f1096986b4, type: 3}
-  - {fileID: 9198638147508100948, guid: 64dd560ee42bfdf40b26ab0a762216e1, type: 3}
+  characterPrefabs: []
+  P3: {fileID: 0}
 --- !u!1001 &706305709102403078
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3654185919763320025}
   - component: {fileID: 3654185919763320024}
   - component: {fileID: 3654185919763320026}
+  - component: {fileID: 646474803089393405}
   - component: {fileID: 3654185919763320028}
   - component: {fileID: 3654185919563112059}
   - component: {fileID: 4338092194455151190}
@@ -103,6 +104,23 @@ MonoBehaviour:
   finalVector: {x: 0, y: 0, z: 0}
   speed: 10
   rotationSpeed: 10
+--- !u!114 &646474803089393405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4338092194455151184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a76bdf624a4dd04ba97ba3a70ae5265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterPrefabs:
+  - {fileID: 7986256120283609655, guid: d0c8ad89842df3748a9000883c0f2038, type: 3}
+  - {fileID: 444673746368487205, guid: 5266204076001be42a3938c5fc4f8a29, type: 3}
+  - {fileID: 4151250519827226848, guid: 0e927e63841ea664abd812f1096986b4, type: 3}
+  - {fileID: 9198638147508100948, guid: 64dd560ee42bfdf40b26ab0a762216e1, type: 3}
 --- !u!114 &3654185919763320028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a085dfce342e956419f6e9e91b91e5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  citizen: {fileID: 4338092194455151184}
   collider: {fileID: 3654185919763320024}
   HaveBuff: 0
   buff: {fileID: 3654185920062576284}
@@ -175,11 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143f2dd2c7625554784fcfcedfc9a9a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character:
-  - {fileID: 7986256120283609655, guid: d0c8ad89842df3748a9000883c0f2038, type: 3}
-  - {fileID: 444673746368487205, guid: 5266204076001be42a3938c5fc4f8a29, type: 3}
-  - {fileID: 4151250519827226848, guid: 0e927e63841ea664abd812f1096986b4, type: 3}
-  - {fileID: 9198638147508100948, guid: 64dd560ee42bfdf40b26ab0a762216e1, type: 3}
+  characterPrefabs: []
+  P3: {fileID: 0}
 --- !u!1001 &3654185920082364766
 PrefabInstance:
   m_ObjectHideFlags: 0
