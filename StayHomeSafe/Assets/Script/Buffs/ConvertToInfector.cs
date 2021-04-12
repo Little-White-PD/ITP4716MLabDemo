@@ -23,7 +23,7 @@ public class ConvertToInfector : MonoBehaviour
 
     private void Awake()
     {
-        inventory = GetComponentInChildren<Inventory>();
+        inventory = GetComponent<Inventory>();
         buff.Play();
     }
 

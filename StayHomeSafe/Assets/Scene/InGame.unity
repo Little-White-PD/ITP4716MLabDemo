@@ -12459,7 +12459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.84
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12531,10 +12531,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Direction
       m_Flags: 0
-  controller: {fileID: 706305708924107230}
+  controller: {fileID: 0}
   animatorHandler: {fileID: 0}
   finalVector: {x: 0, y: 0, z: 0}
-  speed: 10
+  speed: 4
   rotationSpeed: 10
 --- !u!114 &706305708924107226
 MonoBehaviour:
@@ -12722,7 +12722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.84
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12849,10 +12849,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Direction
       m_Flags: 8
-  controller: {fileID: 1111544128511300169}
+  controller: {fileID: 0}
   animatorHandler: {fileID: 0}
   finalVector: {x: 0, y: 0, z: 0}
-  speed: 10
+  speed: 3
   rotationSpeed: 10
 --- !u!143 &1111544128511300169
 CharacterController:
@@ -13433,10 +13433,10 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Direction
       m_Flags: 0
-  controller: {fileID: 3654185919543927365}
+  controller: {fileID: 0}
   animatorHandler: {fileID: 0}
   finalVector: {x: 0, y: 0, z: 0}
-  speed: 10
+  speed: 4
   rotationSpeed: 10
 --- !u!114 &3654185919748468967
 MonoBehaviour:
@@ -13473,7 +13473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.76
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14079,24 +14079,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
---- !u!143 &6631906023033101920
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6631906023033101932}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1.94
-  m_Radius: 0.35
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.96, z: 0}
 --- !u!114 &6631906023033101921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14169,9 +14151,9 @@ GameObject:
   - component: {fileID: 6631906023033101923}
   - component: {fileID: 6631906023033101922}
   - component: {fileID: 6631906023033101921}
-  - component: {fileID: 6631906023033101920}
   - component: {fileID: 6631906023033101934}
   - component: {fileID: 9154086978925233690}
+  - component: {fileID: 6631906023033101936}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -14273,6 +14255,24 @@ Transform:
   m_Father: {fileID: 1292212527}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &6631906023033101936
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6631906023033101932}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.94
+  m_Radius: 0.35
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.96, z: 0}
 --- !u!114 &7028000898465479339
 MonoBehaviour:
   m_ObjectHideFlags: 0

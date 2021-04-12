@@ -11,8 +11,8 @@ using UnityEngine.InputSystem;
         public AnimatorHandler animatorHandler;
 
         public Vector3 finalVector;
-        public float speed;
-        public float rotationSpeed = 10f;
+    public float speed;
+    public float rotationSpeed = 10f;
         private float gravityValue = -9.81f;
 
         Animator anim;
