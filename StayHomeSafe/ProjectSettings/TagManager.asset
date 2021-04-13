@@ -13,6 +13,11 @@ TagManager:
   - location1
   - location2
   - location3
+  - location
+  - CheckPoint1
+  - CheckPoint2
+  - CheckPoint3
+  - CheckPoint4
   layers:
   - Default
   - TransparentFX
