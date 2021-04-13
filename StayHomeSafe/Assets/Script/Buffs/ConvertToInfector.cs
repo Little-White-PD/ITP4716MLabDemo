@@ -7,7 +7,9 @@ using UnityEngine;
 public class ConvertToInfector : MonoBehaviour
 {
     public CapsuleCollider collider;
+    public Animator anim;
     public bool HaveBuff;
+    public bool sleep;
     public ParticleSystem buff;
     private Inventory inventory;
 
@@ -24,13 +26,14 @@ public class ConvertToInfector : MonoBehaviour
     private void Awake()
     {
         inventory = GetComponent<Inventory>();
+        
         buff.Play();
     }
 
     public void Start()
     {
         collider = GetComponent<CapsuleCollider>();
-
+        anim = GetComponentInChildren<Animator>();
     }
 
 
@@ -63,13 +66,18 @@ public class ConvertToInfector : MonoBehaviour
             useSyringe = false;
         }
 
+        if (sleep)
+        {
+            anim.SetBool("sleep", true);
+            StartCoroutine(Sleep());
+        }
 
     }
 
     public void OnTriggerStay(Collider other)
     {
         //if (other.tag == "Infector" && citizen.tag != "Infector" && !protect)
-        if(HaveBuff == true && protect == false)
+        if (HaveBuff == true && protect == false)
         {
             if (other.GetComponent<ConvertToInfector>().protect == false)
             {
@@ -77,29 +85,31 @@ public class ConvertToInfector : MonoBehaviour
 
             }
         }
-        if (useSyringe == true &&other.tag == "NPC")
+        if (useSyringe == true && other.tag == "NPC")
         {
 
-                other.GetComponent<ConvertToInfector>().HaveBuff = false;
-                            useSyringe = false;
-            
+            other.GetComponent<ConvertToInfector>().HaveBuff = false;
+            useSyringe = false;
+
         }
-        
-        
-        
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "sleep")
+            sleep = true;
+    }
+
+    IEnumerator Sleep()
+    {
+        yield return new WaitForSeconds(5);
+        anim.SetBool("sleep", false);
+        sleep = false;
+
     }
 
 
-    /* void ColliderOpen()
-     {
-         if (citizen.tag == "Infector")
-         {
-             collider.enabled = true;
-             citizen.tag = "Citizens";
-         }
-     }*/
-
-
+    
 
 
 }

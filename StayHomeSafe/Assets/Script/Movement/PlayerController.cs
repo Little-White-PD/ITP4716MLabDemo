@@ -9,6 +9,7 @@ using UnityEngine.InputSystem;
         public InputAction direction;
         public CharacterController controller;
         public AnimatorHandler animatorHandler;
+    public ConvertToInfector convertToInfector;
 
         public Vector3 finalVector;
     public float speed;
@@ -16,6 +17,7 @@ using UnityEngine.InputSystem;
         private float gravityValue = -9.81f;
 
         Animator anim;
+    public KeyCode skill;
 
     private void Awake()
     {
@@ -27,6 +29,8 @@ using UnityEngine.InputSystem;
             anim = GetComponentInChildren<Animator>();
             animatorHandler = GetComponentInChildren<AnimatorHandler>();
             animatorHandler.Initialize();
+        convertToInfector = GetComponent<ConvertToInfector>();
+        
         }
 
         private void OnEnable()
@@ -39,19 +43,15 @@ using UnityEngine.InputSystem;
             direction.Disable();
         }
 
-    private void Update()
-    {
-        HandleQuickSlotsInput();
-    }
-
     private void FixedUpdate()
         {
         
-
             Vector2 inputVector = direction.ReadValue<Vector2>();
             finalVector.x = inputVector.x;
             finalVector.z = inputVector.y;
             finalVector.y += gravityValue * Time.deltaTime;
+        if (convertToInfector.sleep == false)
+        {
             controller.Move(finalVector * Time.deltaTime * speed);
 
             if (animatorHandler.canRotate)
@@ -72,25 +72,11 @@ using UnityEngine.InputSystem;
             }
             anim.SetFloat("speed", inputVector.magnitude);
 
-        
-    }
-
-    private void HandleQuickSlotsInput()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            
-            //playerInventory.ChangeRightWeapon();
-
-        }
-        if (Input.GetButtonDown("Fire2"))
-        {
-
-            //playerInventory.ChangeLeftWeapon();
         }
     }
 
-    
+
+  
 
 }
 

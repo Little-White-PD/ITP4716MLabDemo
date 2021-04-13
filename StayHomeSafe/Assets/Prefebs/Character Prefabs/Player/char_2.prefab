@@ -3283,6 +3283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444673746368447301}
   - component: {fileID: 6542392171120156420}
+  - component: {fileID: 6792683839821279063}
   m_Layer: 0
   m_Name: char_2
   m_TagString: Player
@@ -3315,7 +3316,7 @@ Animator:
   m_GameObject: {fileID: 444673746368487205}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cb71e0b181fbc8c4a9a3e9f45f8448f3, type: 3}
-  m_Controller: {fileID: 9100000, guid: ba7668ff3661bf64e85bacefcbedd348, type: 2}
+  m_Controller: {fileID: 9100000, guid: b0415443f034cd94ba72fad5e24fc70d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3324,6 +3325,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6792683839821279063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444673746368487205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3e7ae3400986a48b7870374a19c0aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
+  convertToInfector: {fileID: 0}
 --- !u!1 &444673746368487209
 GameObject:
   m_ObjectHideFlags: 0

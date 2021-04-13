@@ -16267,9 +16267,11 @@ MonoBehaviour:
       m_Flags: 0
   controller: {fileID: 0}
   animatorHandler: {fileID: 0}
+  convertToInfector: {fileID: 0}
   finalVector: {x: 0, y: 0, z: 0}
   speed: 4
   rotationSpeed: 10
+  skill: 0
 --- !u!114 &706305708924107226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16283,7 +16285,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 706305708924107229}
+  anim: {fileID: 0}
   HaveBuff: 0
+  sleep: 0
   buff: {fileID: 878102511}
   gasMaskTime: 20
   maskTime: 5
@@ -16511,9 +16515,11 @@ MonoBehaviour:
       m_Flags: 8
   controller: {fileID: 0}
   animatorHandler: {fileID: 0}
+  convertToInfector: {fileID: 0}
   finalVector: {x: 0, y: 0, z: 0}
   speed: 3
   rotationSpeed: 10
+  skill: 260
 --- !u!143 &1111544128511300169
 CharacterController:
   m_ObjectHideFlags: 0
@@ -16559,7 +16565,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 1111544128511300170}
+  anim: {fileID: 0}
   HaveBuff: 0
+  sleep: 0
   buff: {fileID: 1013793199}
   gasMaskTime: 20
   maskTime: 5
@@ -16985,7 +16993,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 3654185919543927364}
+  anim: {fileID: 0}
   HaveBuff: 0
+  sleep: 0
   buff: {fileID: 1742701992}
   gasMaskTime: 20
   maskTime: 5
@@ -17056,9 +17066,11 @@ MonoBehaviour:
       m_Flags: 0
   controller: {fileID: 0}
   animatorHandler: {fileID: 0}
+  convertToInfector: {fileID: 0}
   finalVector: {x: 0, y: 0, z: 0}
   speed: 4
   rotationSpeed: 10
+  skill: 0
 --- !u!114 &3654185919748468967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17724,6 +17736,14 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -17766,7 +17786,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 0}
+  anim: {fileID: 0}
   HaveBuff: 0
+  sleep: 0
   buff: {fileID: 428201447}
   gasMaskTime: 20
   maskTime: 5
@@ -17874,9 +17896,11 @@ MonoBehaviour:
       m_Flags: 8
   controller: {fileID: 0}
   animatorHandler: {fileID: 0}
+  convertToInfector: {fileID: 0}
   finalVector: {x: 0, y: 0, z: 0}
   speed: 5
   rotationSpeed: 10
+  skill: 111
 --- !u!114 &6631906023033101934
 MonoBehaviour:
   m_ObjectHideFlags: 0
