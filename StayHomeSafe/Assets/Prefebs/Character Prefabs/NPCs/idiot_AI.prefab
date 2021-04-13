@@ -791,6 +791,7 @@ GameObject:
   - component: {fileID: 2201843702417325429}
   - component: {fileID: 2201843702417325427}
   - component: {fileID: 2201843702417325426}
+  - component: {fileID: 8468060303484121677}
   m_Layer: 0
   m_Name: idiot_AI
   m_TagString: NPC
@@ -880,13 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d985c2b71c80e947a1cd5bbde01a603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   convert: {fileID: 2201843702417325426}
-  radius: 5
-  location:
-  - {fileID: 7221841560767804478, guid: 1f62e84ba7e57de46be7bed45661b174, type: 3}
-  - {fileID: 1567217117570628224, guid: cbf04a530de7ecc4bbf77f0a37a0444a, type: 3}
-  - {fileID: 5080880630422218683, guid: 799a05fe2efd09a4fb01fcc9324cb43f, type: 3}
   distance: 0
   randComponent: 0
   randLocation: 0
@@ -902,7 +897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a085dfce342e956419f6e9e91b91e5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  citizen: {fileID: 1156084010164805801}
   collider: {fileID: 2201843702417325430}
   HaveBuff: 1
   buff: {fileID: 2201843702411534856}
@@ -913,6 +907,25 @@ MonoBehaviour:
   useSyringe: 0
   protectTime: 0
   protect: 0
+--- !u!95 &8468060303484121677
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156084010164805801}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: cb71e0b181fbc8c4a9a3e9f45f8448f3, type: 3}
+  m_Controller: {fileID: 9100000, guid: e91c2c7e89701e7469a752fec6178a09, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1156084010164805805
 GameObject:
   m_ObjectHideFlags: 0
