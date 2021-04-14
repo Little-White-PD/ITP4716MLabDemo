@@ -7,6 +7,7 @@ using UnityEngine;
 public class ConvertToInfector : MonoBehaviour
 {
     public CapsuleCollider collider;
+    public PlayerController playerController;
     public Animator anim;
     public bool HaveBuff;
     public bool sleep;
@@ -22,6 +23,8 @@ public class ConvertToInfector : MonoBehaviour
 
     public float protectTime;
     public bool protect;
+
+    public float playerPoint;
 
     private void Awake()
     {
@@ -76,20 +79,22 @@ public class ConvertToInfector : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        //if (other.tag == "Infector" && citizen.tag != "Infector" && !protect)
+        ConvertToInfector convert = other.GetComponent<ConvertToInfector>();
         if (HaveBuff == true && protect == false)
         {
-            if (other.GetComponent<ConvertToInfector>().protect == false)
+            if (convert.protect == false)
             {
-                other.GetComponent<ConvertToInfector>().HaveBuff = true;
+                convert.HaveBuff = true;
+                playerPoint += 2f;
 
             }
         }
         if (useSyringe == true && other.tag == "NPC")
         {
 
-            other.GetComponent<ConvertToInfector>().HaveBuff = false;
+            convert.HaveBuff = false;
             useSyringe = false;
+            playerPoint += 10f;
 
         }
     }

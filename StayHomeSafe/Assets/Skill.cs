@@ -31,7 +31,7 @@ public class Skill : MonoBehaviour
 
     IEnumerator skillCollTime()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         skillColl.SetActive(false);
     }
 

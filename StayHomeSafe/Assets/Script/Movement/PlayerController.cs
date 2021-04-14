@@ -4,19 +4,19 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-    public class PlayerController : MonoBehaviour
-    {
-        public InputAction direction;
-        public CharacterController controller;
-        public AnimatorHandler animatorHandler;
+public class PlayerController : MonoBehaviour
+{
+    public InputAction direction;
+    public CharacterController controller;
+    public AnimatorHandler animatorHandler;
     public ConvertToInfector convertToInfector;
 
-        public Vector3 finalVector;
+    public Vector3 finalVector;
     public float speed;
     public float rotationSpeed = 10f;
-        private float gravityValue = -9.81f;
+    private float gravityValue = -9.81f;
 
-        Animator anim;
+    Animator anim;
     public KeyCode skill;
 
     private void Awake()
@@ -24,32 +24,33 @@ using UnityEngine.InputSystem;
 
     }
     private void Start()
-        {
-            controller = GetComponentInChildren<CharacterController>();
-            anim = GetComponentInChildren<Animator>();
-            animatorHandler = GetComponentInChildren<AnimatorHandler>();
-            animatorHandler.Initialize();
+    {
+        controller = GetComponentInChildren<CharacterController>();
+        anim = GetComponentInChildren<Animator>();
+        animatorHandler = GetComponentInChildren<AnimatorHandler>();
+        animatorHandler.Initialize();
         convertToInfector = GetComponent<ConvertToInfector>();
-        
-        }
 
-        private void OnEnable()
-        {
-            direction.Enable();
-        }
+    }
 
-        private void OnDisable()
-        {
-            direction.Disable();
-        }
+    private void OnEnable()
+    {
+        direction.Enable();
+    }
 
-    private void FixedUpdate()
-        {
-        
-            Vector2 inputVector = direction.ReadValue<Vector2>();
-            finalVector.x = inputVector.x;
-            finalVector.z = inputVector.y;
-            finalVector.y += gravityValue * Time.deltaTime;
+    private void OnDisable()
+    {
+        direction.Disable();
+    }
+
+    private void Update()
+    {
+
+        Vector2 inputVector = direction.ReadValue<Vector2>();
+
+        finalVector.x = inputVector.x;
+        finalVector.z = inputVector.y;
+        finalVector.y += gravityValue * Time.deltaTime;
         if (convertToInfector.sleep == false)
         {
             controller.Move(finalVector * Time.deltaTime * speed);
@@ -73,10 +74,8 @@ using UnityEngine.InputSystem;
             anim.SetFloat("speed", inputVector.magnitude);
 
         }
+        else finalVector = new Vector3(0, 0, 0);
+
     }
-
-
-  
-
 }
 

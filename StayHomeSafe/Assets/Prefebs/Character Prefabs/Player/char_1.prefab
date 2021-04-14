@@ -2943,8 +2943,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf43a8ac36b821b4ea060c6600a17bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill: 111
   skillColl: {fileID: 5540489421604773695}
+  skillCD: 0
+  playerController: {fileID: 0}
+  convertToInfector: {fileID: 0}
 --- !u!1 &8194673518653381050
 GameObject:
   m_ObjectHideFlags: 0
@@ -3322,6 +3324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CFX3_Vortex_Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442115079416727119, guid: af88fa5ea3764414aac417860caf5b22,
+        type: 3}
+      propertyPath: m_TagString
+      value: sleep
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af88fa5ea3764414aac417860caf5b22, type: 3}

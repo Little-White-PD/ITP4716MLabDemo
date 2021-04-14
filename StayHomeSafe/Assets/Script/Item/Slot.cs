@@ -24,17 +24,23 @@ public class Slot : MonoBehaviour
             if (inventory.itemName[i] == "GasMask")
             {
                 convertToInfector.gasMask = false;
-                convertToInfector.protectTime += convertToInfector.gasMaskTime;
-                inventory.isFull[i] = false;
-                inventory.itemName[i] = null;
+                if (convertToInfector.protect == false)
+                
+                    convertToInfector.protectTime += convertToInfector.gasMaskTime;
+                    inventory.isFull[i] = false;
+                    inventory.itemName[i] = null;
+                
             }
 
             if (inventory.itemName[i] == "FaceMask")
             {
                 convertToInfector.mask = false;
-                convertToInfector.protectTime += convertToInfector.maskTime;
-                inventory.isFull[i] = false;
-                inventory.itemName[i] = null;
+                if (convertToInfector.protect == false)
+                
+                    convertToInfector.protectTime += convertToInfector.maskTime;
+                    inventory.isFull[i] = false;
+                    inventory.itemName[i] = null;
+                
             }
             if (inventory.itemName[i] == "Syringe")
             {

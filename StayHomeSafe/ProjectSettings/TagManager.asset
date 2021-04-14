@@ -4,8 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Citizens
-  - Infector
   - GasMask
   - Mask
   - Syringe
@@ -14,10 +12,6 @@ TagManager:
   - location2
   - location3
   - location
-  - CheckPoint1
-  - CheckPoint2
-  - CheckPoint3
-  - CheckPoint4
   - sleep
   - FxTemporaire
   - Wall
