@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 public class ConvertToInfector : MonoBehaviour
@@ -13,6 +14,7 @@ public class ConvertToInfector : MonoBehaviour
     public bool sleep;
     public ParticleSystem buff;
     private Inventory inventory;
+    public TextMeshProUGUI text;
 
     public float gasMaskTime = 20f;
     public float maskTime = 5f;
@@ -75,6 +77,8 @@ public class ConvertToInfector : MonoBehaviour
             StartCoroutine(Sleep());
         }
 
+        text.text = (playerPoint).ToString("00");
+
     }
 
     public void OnTriggerStay(Collider other)
@@ -82,10 +86,10 @@ public class ConvertToInfector : MonoBehaviour
         ConvertToInfector convert = other.GetComponent<ConvertToInfector>();
         if (HaveBuff == true && protect == false)
         {
-            if (convert.protect == false)
+            if (convert.protect == false )
             {
                 convert.HaveBuff = true;
-                playerPoint += 2f;
+                               
 
             }
         }
