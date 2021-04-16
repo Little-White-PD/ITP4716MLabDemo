@@ -95,10 +95,18 @@ public class ConvertToInfector : MonoBehaviour
         }
         if (useSyringe == true && other.tag == "NPC")
         {
-
-            convert.HaveBuff = false;
-            useSyringe = false;
-            playerPoint += 10f;
+            if (convert.HaveBuff == true)
+            {
+                useSyringe = false;
+                playerPoint += 10f;
+                Destroy(convert.gameObject);
+            }
+            else 
+            {
+                useSyringe = false;
+                playerPoint += 5f;
+                Destroy(convert.gameObject);
+            }
 
         }
     }
