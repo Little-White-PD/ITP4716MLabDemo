@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class DesOJ : MonoBehaviour
 {
-    public Collider coll;
 
     private void Start()
     {
-
+        StartCoroutine(Des());
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Wall")
-            Destroy(gameObject);
 
+    IEnumerator Des()
+    {
+        yield return new WaitForSeconds(20);
+        Destroy(gameObject);
     }
 }
