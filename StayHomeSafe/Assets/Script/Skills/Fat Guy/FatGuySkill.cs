@@ -19,7 +19,7 @@ public class FatGuySkill : MonoBehaviour
     {
         playerController = GetComponentInParent<PlayerController>();
         convertToInfector = GetComponentInParent<ConvertToInfector>();
-        playerController.speed = speed;
+        playerController.speed = 3f;
     }
 
     
