@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Skill : MonoBehaviour
 {
+    public float speed = 5f;
     public GameObject skillColl;
     public bool skillCD;
+    public AudioSource source;
+    public AudioClip useSkill;
     public PlayerController playerController;
     public ConvertToInfector convertToInfector;
 
     private void Start()
     {
+        
         playerController = GetComponentInParent<PlayerController>();
         convertToInfector = GetComponentInParent<ConvertToInfector>();
+        source = GetComponent<AudioSource>();
+        playerController.speed = speed;
     }
 
     private void Update()
@@ -21,6 +27,7 @@ public class Skill : MonoBehaviour
         {
             if (Input.GetKeyDown(playerController.skill))
             {
+                source.PlayOneShot(useSkill);
                 skillCD = true;
                 skillColl.SetActive(true);
                 convertToInfector.skillTime = 20f;

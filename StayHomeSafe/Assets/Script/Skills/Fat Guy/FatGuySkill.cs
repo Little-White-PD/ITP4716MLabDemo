@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FatGuySkill : MonoBehaviour
 {
+    public float speed = 3f;
     public PlayerController playerController;
     public ConvertToInfector convertToInfector;
     public bool skillCD;
@@ -18,6 +19,7 @@ public class FatGuySkill : MonoBehaviour
     {
         playerController = GetComponentInParent<PlayerController>();
         convertToInfector = GetComponentInParent<ConvertToInfector>();
+        playerController.speed = speed;
     }
 
     
@@ -27,10 +29,12 @@ public class FatGuySkill : MonoBehaviour
         {
             if (Input.GetKeyDown(playerController.skill))
             {
+                source.PlayOneShot(useSkill);
                 skillCD = true;
                 bike.SetActive(true);
                 transform.position += new Vector3(0,0.3f,0);
-                playerController.speed = 7f;
+                playerController.speed = 10f;
+                
             }
         }
     }
@@ -42,6 +46,8 @@ public class FatGuySkill : MonoBehaviour
         convertToInfector.sleep = true;
         StartCoroutine(SkillCD());
         StartCoroutine(Wake());
+        convertToInfector.skillTime = 40f;
+        playerController.speed = 3f;
     }
 
     IEnumerator SkillCD()
