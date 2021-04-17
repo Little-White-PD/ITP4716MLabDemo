@@ -115,6 +115,7 @@ public class ConvertToInfector : MonoBehaviour
                 playerPoint += 5f;
                 Destroy(convert.gameObject);
             }
+            PlayerPrefs.SetFloat("PlayerPoint", playerPoint);
 
         }
     }
