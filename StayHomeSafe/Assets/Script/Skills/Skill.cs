@@ -18,7 +18,7 @@ public class Skill : MonoBehaviour
         playerController = GetComponentInParent<PlayerController>();
         convertToInfector = GetComponentInParent<ConvertToInfector>();
         source = GetComponent<AudioSource>();
-        playerController.speed = speed;
+        playerController.speed = 5f;
     }
 
     private void Update()

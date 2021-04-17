@@ -15,10 +15,13 @@ public class FatGuySkill : MonoBehaviour
     public AudioClip hit;
     public AudioClip wakeUp;
 
+    public Collider col;
+
     void Start()
     {
         playerController = GetComponentInParent<PlayerController>();
         convertToInfector = GetComponentInParent<ConvertToInfector>();
+        source = GetComponent<AudioSource>();
         playerController.speed = 3f;
     }
 
@@ -32,6 +35,7 @@ public class FatGuySkill : MonoBehaviour
                 source.PlayOneShot(useSkill);
                 skillCD = true;
                 bike.SetActive(true);
+                col.enabled = true;
                 transform.position += new Vector3(0,0.3f,0);
                 playerController.speed = 10f;
                 
@@ -41,24 +45,32 @@ public class FatGuySkill : MonoBehaviour
 
     public void Hit()
     {
+        col.enabled = false;
         bike.SetActive(false);
         transform.position -= new Vector3(0, 0.3f, 0);
         convertToInfector.sleep = true;
         StartCoroutine(SkillCD());
         StartCoroutine(Wake());
-        convertToInfector.skillTime = 40f;
+        convertToInfector.skillTime = 10f;
         playerController.speed = 3f;
     }
 
     IEnumerator SkillCD()
     {
-        yield return new WaitForSeconds(40);
+        yield return new WaitForSeconds(10);
         skillCD = false;
     }
 
     IEnumerator Wake()
     {
         yield return new WaitForSeconds(5);
+        convertToInfector.sleep = false;
         source.PlayOneShot(wakeUp);
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        source.PlayOneShot(hit);
+        Hit();
     }
 }
