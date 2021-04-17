@@ -27,6 +27,8 @@ public class ConvertToInfector : MonoBehaviour
     public bool protect;
 
     public float playerPoint;
+    public float skillTime;
+    public TextMeshProUGUI skillTimer;
 
     private void Awake()
     {
@@ -78,6 +80,12 @@ public class ConvertToInfector : MonoBehaviour
         }
 
         text.text = (playerPoint).ToString("00");
+        skillTimer.text = (skillTime).ToString("00");
+
+        if (skillTime > 0)
+        {
+            skillTime -= Time.deltaTime;
+        }
 
     }
 

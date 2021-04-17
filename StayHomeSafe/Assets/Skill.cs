@@ -23,6 +23,7 @@ public class Skill : MonoBehaviour
             {
                 skillCD = true;
                 skillColl.SetActive(true);
+                convertToInfector.skillTime = 20f;
                 StartCoroutine(skillCollTime());
                 StartCoroutine(SkillCD());
             }
@@ -37,7 +38,7 @@ public class Skill : MonoBehaviour
 
     IEnumerator SkillCD()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(20);
         skillCD = false;
     }
 
