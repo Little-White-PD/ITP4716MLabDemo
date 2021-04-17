@@ -17,8 +17,6 @@ public class NPCSpawner : MonoBehaviour
 
     void Start()
     {
-        spawnMostWait = PlayerPrefs.GetFloat("NPCr1");
-        spawnLeastWait = PlayerPrefs.GetFloat("NPCr2");
         StartCoroutine(waitSpawner());
     }
 
