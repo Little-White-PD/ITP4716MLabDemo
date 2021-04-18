@@ -4224,6 +4224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 280887884}
   Gameover: {fileID: 1479574933}
+  stop: {fileID: 583698989}
 --- !u!4 &604840961 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1567217117570628227, guid: cbf04a530de7ecc4bbf77f0a37a0444a,
@@ -9242,6 +9243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
   Gameover: {fileID: 0}
+  stop: {fileID: 0}
 --- !u!1 &1158889950
 GameObject:
   m_ObjectHideFlags: 0
@@ -15642,6 +15644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
   Gameover: {fileID: 0}
+  stop: {fileID: 0}
 --- !u!114 &1946612685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15754,6 +15757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
   Gameover: {fileID: 0}
+  stop: {fileID: 0}
 --- !u!4 &1964029701
 Transform:
   m_ObjectHideFlags: 0
