@@ -14,6 +14,8 @@ public class FatGuySkill : MonoBehaviour
     public AudioClip useSkill;
     public AudioClip hit;
     public AudioClip wakeUp;
+    public AudioSource music;
+    public AudioClip fatmusic;
 
     public Collider col;
 
@@ -21,7 +23,7 @@ public class FatGuySkill : MonoBehaviour
     {
         playerController = GetComponentInParent<PlayerController>();
         convertToInfector = GetComponentInParent<ConvertToInfector>();
-        source = GetComponent<AudioSource>();
+
         playerController.speed = 3f;
     }
 
@@ -33,6 +35,7 @@ public class FatGuySkill : MonoBehaviour
             if (Input.GetKeyDown(playerController.skill))
             {
                 source.PlayOneShot(useSkill);
+                music.PlayOneShot(fatmusic);
                 skillCD = true;
                 bike.SetActive(true);
                 col.enabled = true;
@@ -45,6 +48,7 @@ public class FatGuySkill : MonoBehaviour
 
     public void Hit()
     {
+        music.Stop();
         col.enabled = false;
         bike.SetActive(false);
         transform.position -= new Vector3(0, 0.3f, 0);

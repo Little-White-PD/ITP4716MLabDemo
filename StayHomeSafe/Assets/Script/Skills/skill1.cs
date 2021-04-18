@@ -31,16 +31,10 @@ public class skill1 : MonoBehaviour
         {
             if (Input.GetKeyDown(playerController.skill))
             {
-                convertToInfector.usingSkill = true;
                 source.PlayOneShot(useSkill);
                 skillCD = true;
                 convertToInfector.anim.SetTrigger("TurnAround");
                 convertToInfector.skillTime = 15f;
-                player.transform.position = tpPos.transform.position;
-                randNum = Random.Range(0, 4);
-
-
-
                 StartCoroutine(SkillCD());
             }
         }

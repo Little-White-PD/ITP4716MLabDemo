@@ -51,27 +51,30 @@ public class PlayerController : MonoBehaviour
         finalVector.x = inputVector.x;
         finalVector.z = inputVector.y;
         finalVector.y += gravityValue * Time.deltaTime;
-        if (convertToInfector.sleep == false || convertToInfector.usingSkill == false)
+        if (convertToInfector.sleep == false)
         {
-            controller.Move(finalVector * Time.deltaTime * speed);
-
-            if (animatorHandler.canRotate)
+            if (convertToInfector.usingSkill == false)
             {
+                controller.Move(finalVector * Time.deltaTime * speed);
 
-                finalVector.Normalize();
-                finalVector.y = 0;
+                if (animatorHandler.canRotate)
+                {
 
-                if (finalVector == Vector3.zero)
-                    finalVector = gameObject.transform.forward;
+                    finalVector.Normalize();
+                    finalVector.y = 0;
 
-                float rs = rotationSpeed;
+                    if (finalVector == Vector3.zero)
+                        finalVector = gameObject.transform.forward;
 
-                Quaternion tr = Quaternion.LookRotation(finalVector);
-                Quaternion targetRotation = Quaternion.Slerp(gameObject.transform.rotation, tr, rs * Time.deltaTime);
+                    float rs = rotationSpeed;
 
-                gameObject.transform.rotation = targetRotation;
+                    Quaternion tr = Quaternion.LookRotation(finalVector);
+                    Quaternion targetRotation = Quaternion.Slerp(gameObject.transform.rotation, tr, rs * Time.deltaTime);
+
+                    gameObject.transform.rotation = targetRotation;
+                }
+                anim.SetFloat("speed", inputVector.magnitude);
             }
-            anim.SetFloat("speed", inputVector.magnitude);
 
         }
         else finalVector = new Vector3(0, 0, 0);
