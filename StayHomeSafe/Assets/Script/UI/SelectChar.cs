@@ -14,6 +14,8 @@ public class SelectChar : MonoBehaviour
     private GameObject timer;
     public GameObject P3;
     public GameObject P4;
+    public GameObject F3;
+    public GameObject F4;
 
     [Header("List of character")]
     [SerializeField] private List<CharacterSelectObject> characterList = new List<CharacterSelectObject>();
@@ -61,11 +63,13 @@ public class SelectChar : MonoBehaviour
         {
             P3.SetActive(true);
             PlayerPrefs.SetInt("P3",1);
+            F3.SetActive(false);
         }
         if (Input.GetKeyUp(KeyCode.F4))
         {
             P4.SetActive(true);
             PlayerPrefs.SetInt("P4", 1);
+            F4.SetActive(false);
         }
     }
     public void LeftArrow()
