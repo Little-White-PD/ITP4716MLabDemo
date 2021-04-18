@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         finalVector.x = inputVector.x;
         finalVector.z = inputVector.y;
         finalVector.y += gravityValue * Time.deltaTime;
-        if (convertToInfector.sleep == false)
+        if (convertToInfector.sleep == false || convertToInfector.usingSkill == false)
         {
             controller.Move(finalVector * Time.deltaTime * speed);
 

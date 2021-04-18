@@ -159,11 +159,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3e7ae3400986a48b7870374a19c0aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
   playerController: {fileID: 0}
   convertToInfector: {fileID: 0}
+  tpPos: {fileID: 0}
   source: {fileID: 0}
   useSkill: {fileID: 8300000, guid: e5bfc32c48c06b54299df78ed3e030a1, type: 3}
   skillCD: 0
+  randNum: 0
 --- !u!82 &-8526292876396062098
 AudioSource:
   m_ObjectHideFlags: 0

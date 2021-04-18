@@ -12,6 +12,7 @@ public class ConvertToInfector : MonoBehaviour
     public Animator anim;
     public bool HaveBuff;
     public bool sleep;
+    public bool usingSkill;
     public ParticleSystem buff;
     private Inventory inventory;
     public TextMeshProUGUI text;
@@ -79,6 +80,12 @@ public class ConvertToInfector : MonoBehaviour
             StartCoroutine(Sleep());
         }
 
+        if (usingSkill)
+        {
+            anim.SetBool("skill", true);
+            StartCoroutine(Skilling());
+        }
+
         text.text = (playerPoint).ToString("00");
         skillTimer.text = (skillTime).ToString("00");
 
@@ -134,8 +141,16 @@ public class ConvertToInfector : MonoBehaviour
 
     }
 
+    IEnumerator Skilling()
+    {
+        yield return new WaitForSeconds(2);
+        anim.SetBool("skill", false);
+        usingSkill = false;
 
-    
+    }
+
+
+
 
 
 }
