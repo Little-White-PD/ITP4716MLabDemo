@@ -412,7 +412,7 @@ MonoBehaviour:
   inventory: {fileID: 706305709579392114}
   convertToInfector: {fileID: 706305708924107226}
   button: {fileID: 33991685}
-  key: 257
+  key: 55
   i: 0
 --- !u!114 &33991687
 MonoBehaviour:
@@ -7494,7 +7494,7 @@ MonoBehaviour:
   inventory: {fileID: 706305709579392114}
   convertToInfector: {fileID: 706305708924107226}
   button: {fileID: 913591871}
-  key: 258
+  key: 56
   i: 1
 --- !u!114 &913591873
 MonoBehaviour:
@@ -8258,7 +8258,7 @@ MonoBehaviour:
   inventory: {fileID: 706305709579392114}
   convertToInfector: {fileID: 706305708924107226}
   button: {fileID: 1014542641}
-  key: 259
+  key: 57
   i: 2
 --- !u!114 &1014542643
 MonoBehaviour:
@@ -11757,7 +11757,7 @@ MonoBehaviour:
   inventory: {fileID: 4338092194137672906}
   convertToInfector: {fileID: 3654185919543927360}
   button: {fileID: 1501897009}
-  key: 259
+  key: 332
   i: 2
 --- !u!114 &1501897011
 MonoBehaviour:
@@ -12392,7 +12392,7 @@ MonoBehaviour:
   inventory: {fileID: 4338092194137672906}
   convertToInfector: {fileID: 3654185919543927360}
   button: {fileID: 1627986894}
-  key: 258
+  key: 331
   i: 1
 --- !u!114 &1627986896
 MonoBehaviour:
@@ -16210,7 +16210,7 @@ MonoBehaviour:
   inventory: {fileID: 4338092194137672906}
   convertToInfector: {fileID: 3654185919543927360}
   button: {fileID: 2026939429}
-  key: 257
+  key: 330
   i: 0
 --- !u!114 &2026939431
 MonoBehaviour:
@@ -17055,6 +17055,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8562940803184063298, guid: 67f7c2dfe3bc4124bbc549f4122c4e55,
+        type: 3}
+      propertyPath: skill
+      value: 52
+      objectReference: {fileID: 0}
     - target: {fileID: 8562940803184063299, guid: 67f7c2dfe3bc4124bbc549f4122c4e55,
         type: 3}
       propertyPath: m_Name
@@ -17345,7 +17350,7 @@ MonoBehaviour:
   inventory: {fileID: 6631906023033101921}
   convertToInfector: {fileID: 6631906023033101922}
   button: {fileID: 1885096831955648992}
-  key: 111
+  key: 51
   i: 2
 --- !u!1001 &2868784642061072049
 PrefabInstance:
@@ -17366,6 +17371,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9198638147508100948, guid: 64dd560ee42bfdf40b26ab0a762216e1,
         type: 3}
+    - target: {fileID: 3654185919763320026, guid: 16df9171a1d0d3147bf3592733587b7f,
+        type: 3}
+      propertyPath: skill
+      value: 333
+      objectReference: {fileID: 0}
     - target: {fileID: 3654185919763320028, guid: 16df9171a1d0d3147bf3592733587b7f,
         type: 3}
       propertyPath: text
@@ -17720,7 +17730,7 @@ MonoBehaviour:
   inventory: {fileID: 6631906023033101921}
   convertToInfector: {fileID: 6631906023033101922}
   button: {fileID: 3727709499861842512}
-  key: 117
+  key: 49
   i: 0
 --- !u!1 &3727709499861842516
 GameObject:
@@ -17903,7 +17913,7 @@ MonoBehaviour:
   inventory: {fileID: 6631906023033101921}
   convertToInfector: {fileID: 6631906023033101922}
   button: {fileID: 4725196152267414055}
-  key: 105
+  key: 50
   i: 1
 --- !u!222 &4725196152267414053
 CanvasRenderer:
@@ -18057,6 +18067,11 @@ PrefabInstance:
       propertyPath: slots.Array.data[2]
       value: 
       objectReference: {fileID: 1014542639}
+    - target: {fileID: 706305708292116610, guid: 533b1b385cfd56745b5c073c751ffe02,
+        type: 3}
+      propertyPath: skill
+      value: 48
+      objectReference: {fileID: 0}
     - target: {fileID: 706305708292116610, guid: 533b1b385cfd56745b5c073c751ffe02,
         type: 3}
       propertyPath: direction.m_SingletonActionBindings.Array.size
