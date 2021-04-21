@@ -31,6 +31,7 @@ public class ConvertToInfector : MonoBehaviour
     public float skillTime;
     public TextMeshProUGUI skillTimer;
 
+
     private void Awake()
     {
         inventory = GetComponent<Inventory>();
@@ -94,6 +95,7 @@ public class ConvertToInfector : MonoBehaviour
             skillTime -= Time.deltaTime;
         }
 
+
     }
 
     public void OnTriggerStay(Collider other)
@@ -110,13 +112,18 @@ public class ConvertToInfector : MonoBehaviour
         }
         if (useSyringe == true && other.tag == "NPC")
         {
-            if (convert.HaveBuff == true)
+            if (HaveBuff == true)
+            {
+                HaveBuff = false;
+                useSyringe = false;
+            }
+            else if (convert.HaveBuff == true)
             {
                 useSyringe = false;
                 playerPoint += 10f;
                 Destroy(convert.gameObject);
             }
-            else 
+            else
             {
                 useSyringe = false;
                 playerPoint += 5f;

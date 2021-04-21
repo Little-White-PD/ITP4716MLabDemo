@@ -31,6 +31,11 @@ public class skill1 : MonoBehaviour
         {
             if (Input.GetKeyDown(playerController.skill))
             {
+                playerController.speed = 15f;
+                convertToInfector.protectTime += 1f;
+                convertToInfector.sleep = false;
+                convertToInfector.anim.SetBool("sleep", false);
+                StartCoroutine(SpeedCD());
                 source.PlayOneShot(useSkill);
                 skillCD = true;
                 convertToInfector.anim.SetTrigger("TurnAround");
@@ -46,6 +51,14 @@ public class skill1 : MonoBehaviour
     {
         yield return new WaitForSeconds(15);
         skillCD = false;
+
+    }
+
+    IEnumerator SpeedCD()
+    {
+        yield return new WaitForSeconds(1);
+ 
+        playerController.speed = 5f;
 
     }
 

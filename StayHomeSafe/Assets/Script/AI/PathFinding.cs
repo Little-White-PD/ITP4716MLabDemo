@@ -38,22 +38,27 @@ public class PathFinding : MonoBehaviour
 
 	void Update()
 	{
-		if(convert.HaveBuff == true)
+		if (convert.sleep == false)
 		{
+			if (convert.HaveBuff == true)
+			{
 
-			NM.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
-			StartCoroutine(time());
-			
-        }
-		else
-		{
-			if (randLocation == 0)
-				NM.SetDestination(GameObject.FindWithTag("location1").transform.position);
-			else if (randLocation == 1)
-				NM.SetDestination(GameObject.FindWithTag("location2").transform.position);
+				NM.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
+				StartCoroutine(time());
+
+			}
 			else
-				NM.SetDestination(GameObject.FindWithTag("location3").transform.position);
+			{
+				if (randLocation == 0)
+					NM.SetDestination(GameObject.FindWithTag("location1").transform.position);
+				else if (randLocation == 1)
+					NM.SetDestination(GameObject.FindWithTag("location2").transform.position);
+				else
+					NM.SetDestination(GameObject.FindWithTag("location3").transform.position);
+			}
 		}
+		else
+			NM.SetDestination(transform.position);
 	}
 
     private void OnTriggerEnter(Collider other)
