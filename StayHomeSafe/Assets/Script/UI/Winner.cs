@@ -14,7 +14,7 @@ public class Winner : MonoBehaviour
     public GameObject P4;
     public GameObject p4;
     public Text text;
-    private float x;
+    private float a,b,c,d;
     private ConvertToInfector convertToInfector;
     void Start()
     {
@@ -24,8 +24,8 @@ public class Winner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = (x).ToString("00");
-        x = PlayerPrefs.GetFloat("PlayerPoint");
+        text.text = (a).ToString("00");
+        a = PlayerPrefs.GetFloat("PlayerPoint");
     }
 
     void playerwin()
@@ -33,18 +33,22 @@ public class Winner : MonoBehaviour
         if(P1.GetComponent<ConvertToInfector>().playerPoint > P2.GetComponent<ConvertToInfector>().playerPoint && P1.GetComponent<ConvertToInfector>().playerPoint > P3.GetComponent<ConvertToInfector>().playerPoint && P1.GetComponent<ConvertToInfector>().playerPoint > P4.GetComponent<ConvertToInfector>().playerPoint)
         {
             p1.SetActive(true);
+            a = P1.GetComponent<ConvertToInfector>().playerPoint;
         }
         if (P2.GetComponent<ConvertToInfector>().playerPoint > P1.GetComponent<ConvertToInfector>().playerPoint && P2.GetComponent<ConvertToInfector>().playerPoint > P3.GetComponent<ConvertToInfector>().playerPoint && P2.GetComponent<ConvertToInfector>().playerPoint > P4.GetComponent<ConvertToInfector>().playerPoint)
         {
             p2.SetActive(true);
+            a = P2.GetComponent<ConvertToInfector>().playerPoint;
         }
         if (P3.GetComponent<ConvertToInfector>().playerPoint > P1.GetComponent<ConvertToInfector>().playerPoint && P3.GetComponent<ConvertToInfector>().playerPoint > P2.GetComponent<ConvertToInfector>().playerPoint && P3.GetComponent<ConvertToInfector>().playerPoint > P4.GetComponent<ConvertToInfector>().playerPoint)
         {
             p3.SetActive(true);
+            a = P3.GetComponent<ConvertToInfector>().playerPoint;
         }
         if (P4.GetComponent<ConvertToInfector>().playerPoint > P1.GetComponent<ConvertToInfector>().playerPoint && P4.GetComponent<ConvertToInfector>().playerPoint > P2.GetComponent<ConvertToInfector>().playerPoint && P4.GetComponent<ConvertToInfector>().playerPoint > P3.GetComponent<ConvertToInfector>().playerPoint)
         {
             p4.SetActive(true);
+            a = P4.GetComponent<ConvertToInfector>().playerPoint;
         }
     }
 }
