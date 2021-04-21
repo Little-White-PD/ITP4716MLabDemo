@@ -13,6 +13,7 @@ public class Winner : MonoBehaviour
     public GameObject p3;
     public GameObject P4;
     public GameObject p4;
+    public GameObject noWinner;
     public Text text;
     private float a,b,c,d;
     private ConvertToInfector convertToInfector;
@@ -49,6 +50,11 @@ public class Winner : MonoBehaviour
         {
             p4.SetActive(true);
             a = P4.GetComponent<ConvertToInfector>().playerPoint;
+        }
+        if (P4.GetComponent<ConvertToInfector>().playerPoint == P1.GetComponent<ConvertToInfector>().playerPoint && P4.GetComponent<ConvertToInfector>().playerPoint == P2.GetComponent<ConvertToInfector>().playerPoint && P4.GetComponent<ConvertToInfector>().playerPoint == P3.GetComponent<ConvertToInfector>().playerPoint)
+        {
+            noWinner.SetActive(true);
+            a = 0;
         }
     }
 }
