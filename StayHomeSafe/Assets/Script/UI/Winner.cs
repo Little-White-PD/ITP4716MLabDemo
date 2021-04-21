@@ -26,7 +26,7 @@ public class Winner : MonoBehaviour
     void Update()
     {
         text.text = (a).ToString("00");
-        a = PlayerPrefs.GetFloat("PlayerPoint");
+       // a = PlayerPrefs.GetFloat("PlayerPoint");
     }
 
     void playerwin()
