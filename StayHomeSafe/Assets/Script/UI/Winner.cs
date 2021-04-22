@@ -15,7 +15,7 @@ public class Winner : MonoBehaviour
     public GameObject p4;
     public GameObject noWinner;
     public Text text;
-    private float a,b,c,d;
+    private float a;
     private ConvertToInfector convertToInfector;
     void Start()
     {
@@ -26,7 +26,6 @@ public class Winner : MonoBehaviour
     void Update()
     {
         text.text = (a).ToString("00");
-       // a = PlayerPrefs.GetFloat("PlayerPoint");
     }
 
     void playerwin()
@@ -35,23 +34,19 @@ public class Winner : MonoBehaviour
         {
             p1.SetActive(true);
             a = P1.GetComponent<ConvertToInfector>().playerPoint;
-        }
-        if (P2.GetComponent<ConvertToInfector>().playerPoint > P1.GetComponent<ConvertToInfector>().playerPoint && P2.GetComponent<ConvertToInfector>().playerPoint > P3.GetComponent<ConvertToInfector>().playerPoint && P2.GetComponent<ConvertToInfector>().playerPoint > P4.GetComponent<ConvertToInfector>().playerPoint)
+        }else if (P2.GetComponent<ConvertToInfector>().playerPoint > P1.GetComponent<ConvertToInfector>().playerPoint && P2.GetComponent<ConvertToInfector>().playerPoint > P3.GetComponent<ConvertToInfector>().playerPoint && P2.GetComponent<ConvertToInfector>().playerPoint > P4.GetComponent<ConvertToInfector>().playerPoint)
         {
             p2.SetActive(true);
             a = P2.GetComponent<ConvertToInfector>().playerPoint;
-        }
-        if (P3.GetComponent<ConvertToInfector>().playerPoint > P1.GetComponent<ConvertToInfector>().playerPoint && P3.GetComponent<ConvertToInfector>().playerPoint > P2.GetComponent<ConvertToInfector>().playerPoint && P3.GetComponent<ConvertToInfector>().playerPoint > P4.GetComponent<ConvertToInfector>().playerPoint)
+        }else if (P3.GetComponent<ConvertToInfector>().playerPoint > P1.GetComponent<ConvertToInfector>().playerPoint && P3.GetComponent<ConvertToInfector>().playerPoint > P2.GetComponent<ConvertToInfector>().playerPoint && P3.GetComponent<ConvertToInfector>().playerPoint > P4.GetComponent<ConvertToInfector>().playerPoint)
         {
             p3.SetActive(true);
             a = P3.GetComponent<ConvertToInfector>().playerPoint;
-        }
-        if (P4.GetComponent<ConvertToInfector>().playerPoint > P1.GetComponent<ConvertToInfector>().playerPoint && P4.GetComponent<ConvertToInfector>().playerPoint > P2.GetComponent<ConvertToInfector>().playerPoint && P4.GetComponent<ConvertToInfector>().playerPoint > P3.GetComponent<ConvertToInfector>().playerPoint)
+        }else if (P4.GetComponent<ConvertToInfector>().playerPoint > P1.GetComponent<ConvertToInfector>().playerPoint && P4.GetComponent<ConvertToInfector>().playerPoint > P2.GetComponent<ConvertToInfector>().playerPoint && P4.GetComponent<ConvertToInfector>().playerPoint > P3.GetComponent<ConvertToInfector>().playerPoint)
         {
             p4.SetActive(true);
             a = P4.GetComponent<ConvertToInfector>().playerPoint;
-        }
-        if (P4.GetComponent<ConvertToInfector>().playerPoint == P1.GetComponent<ConvertToInfector>().playerPoint && P4.GetComponent<ConvertToInfector>().playerPoint == P2.GetComponent<ConvertToInfector>().playerPoint && P4.GetComponent<ConvertToInfector>().playerPoint == P3.GetComponent<ConvertToInfector>().playerPoint)
+        }else 
         {
             noWinner.SetActive(true);
             a = 0;
