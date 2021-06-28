@@ -2003,7 +2003,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2829,12 +2829,12 @@ PrefabInstance:
     - target: {fileID: 6845374823225473815, guid: c07a8cb20052a5d4a800ba125944bcf8,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6845374823225473815, guid: c07a8cb20052a5d4a800ba125944bcf8,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6845374823631712805, guid: c07a8cb20052a5d4a800ba125944bcf8,
         type: 3}
@@ -2844,17 +2844,17 @@ PrefabInstance:
     - target: {fileID: 6845374824392336851, guid: c07a8cb20052a5d4a800ba125944bcf8,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6845374824392336851, guid: c07a8cb20052a5d4a800ba125944bcf8,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6845374824392336851, guid: c07a8cb20052a5d4a800ba125944bcf8,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6845374822694023991, guid: c07a8cb20052a5d4a800ba125944bcf8, type: 3}
@@ -7174,7 +7174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1452260118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8811,7 +8811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1796567788
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10522,8 +10522,8 @@ RectTransform:
   m_Father: {fileID: 819881819}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
