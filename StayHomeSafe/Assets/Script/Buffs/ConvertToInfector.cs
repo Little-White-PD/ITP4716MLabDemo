@@ -7,35 +7,40 @@ using TMPro;
 
 public class ConvertToInfector : MonoBehaviour
 {
-    public CapsuleCollider collider;
-    public PlayerController playerController;
-    public Animator anim;
+    [Header("PlayerState")]
     public bool HaveBuff;
     public bool sleep;
     public bool usingSkill;
-    public ParticleSystem buff;
-    private Inventory inventory;
-    public TextMeshProUGUI text;
+    public bool protect;
+    public float protectTime;
+    public float playerPoint;
+    public float skillTime;
 
-    public float gasMaskTime = 20f;
-    public float maskTime = 5f;
-
+    [Header("Slot")]
     public bool mask;
     public bool gasMask;
     public bool useSyringe;
+    [Header("Effect")]
+    public ParticleSystem buff;
+    public ParticleSystem protection;
+    public ParticleSystem heal;
 
-    public float protectTime;
-    public bool protect;
+    [Header("Script")]
+    public float gasMaskTime = 20f;
+    public float maskTime = 5f;
 
-    public float playerPoint;
-    public float skillTime;
+    public CapsuleCollider collider;
+    public PlayerController playerController;
+    public Animator anim;
+
+    private Inventory inventory;
+    public TextMeshProUGUI text;
     public TextMeshProUGUI skillTimer;
-
 
     private void Awake()
     {
         inventory = GetComponent<Inventory>();
-        
+
         buff.Play();
     }
 
@@ -43,6 +48,7 @@ public class ConvertToInfector : MonoBehaviour
     {
         collider = GetComponent<CapsuleCollider>();
         anim = GetComponentInChildren<Animator>();
+        heal.Stop();
     }
 
 
@@ -57,15 +63,26 @@ public class ConvertToInfector : MonoBehaviour
         {
             buff.Play();
         }
+        if (protect == false)
+        {
+            protection.Stop();
+        }
 
+        else if (protect == true && !protection.isPlaying)
+        {
+            protection.Play();
+        }
 
         if (protectTime > 0)
         {
             protect = true;
             protectTime -= Time.deltaTime;
-        }
-        else protect = false;
 
+        }
+        else
+        {
+            protect = false;
+        }
         if (useSyringe == true)
         {
             HaveBuff = false;
@@ -95,7 +112,6 @@ public class ConvertToInfector : MonoBehaviour
             skillTime -= Time.deltaTime;
         }
 
-
     }
 
     public void OnTriggerStay(Collider other)
@@ -103,13 +119,14 @@ public class ConvertToInfector : MonoBehaviour
         ConvertToInfector convert = other.GetComponent<ConvertToInfector>();
         if (HaveBuff == true && protect == false)
         {
-            if (convert.protect == false )
+            if (convert.protect == false)
             {
                 convert.HaveBuff = true;
-                               
+
 
             }
         }
+
         if (useSyringe == true && other.tag == "NPC")
         {
             if (HaveBuff == true)
@@ -121,18 +138,21 @@ public class ConvertToInfector : MonoBehaviour
             {
                 useSyringe = false;
                 playerPoint += 10f;
+                heal.Play();
                 Destroy(convert.gameObject);
             }
             else
             {
                 useSyringe = false;
                 playerPoint += 5f;
+                heal.Play();
                 Destroy(convert.gameObject);
             }
             PlayerPrefs.SetFloat("PlayerPoint", playerPoint);
 
         }
     }
+
 
     public void OnTriggerEnter(Collider other)
     {

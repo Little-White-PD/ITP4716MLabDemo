@@ -11,6 +11,7 @@ public class PathFinding : MonoBehaviour
 	public int randComponent;
 	public int randLocation;
 	public Collider coll;
+	public ParticleSystem area;
 
 
 	private void Awake()
@@ -33,7 +34,7 @@ public class PathFinding : MonoBehaviour
 		{
 			convert.HaveBuff = false;
 		}
-		
+		area.Stop();
 	}
 
 	void Update()
@@ -65,9 +66,17 @@ public class PathFinding : MonoBehaviour
     {
 		if (other.tag == "location1" || other.tag == "location2" || other.tag == "location3")
 			Destroy(gameObject);
+		if (other.tag == "Player")
+			area.Play();
+			
+    }
+    private void OnTriggerExit(Collider other)
+    {
+		if (other.tag == "Player")
+			area.Stop();
     }
 
-	IEnumerator time()
+    IEnumerator time()
 	{
 		yield return new WaitForSeconds(7f);
 		Destroy(gameObject);
