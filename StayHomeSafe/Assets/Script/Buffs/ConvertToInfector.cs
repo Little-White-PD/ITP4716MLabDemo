@@ -24,11 +24,17 @@ public class ConvertToInfector : MonoBehaviour
     public ParticleSystem buff;
     public ParticleSystem protection;
     public ParticleSystem heal;
+    public ParticleSystem useFail;
+
+    [Header("Sound")]
+    public AudioClip protctEnd;
+    public AudioClip use;
 
     [Header("Script")]
     public float gasMaskTime = 20f;
     public float maskTime = 5f;
 
+    public AudioSource source;
     public CapsuleCollider collider;
     public PlayerController playerController;
     public Animator anim;
@@ -48,9 +54,31 @@ public class ConvertToInfector : MonoBehaviour
     {
         collider = GetComponent<CapsuleCollider>();
         anim = GetComponentInChildren<Animator>();
+        source = GetComponent<AudioSource>();
         heal.Stop();
+        useFail.Stop();
     }
+    private void FixedUpdate()
+    {
+        if (sleep)
+        {
+            anim.SetBool("sleep", true);
+            StartCoroutine(Sleep());
+        }
 
+        if (protectTime > 0)
+        {
+            protect = true;
+            protectTime -= Time.deltaTime;
+
+        }
+        else
+        {
+            protect = false;           
+        }
+        
+
+    }
 
     public void Update()
     {
@@ -66,6 +94,7 @@ public class ConvertToInfector : MonoBehaviour
         if (protect == false)
         {
             protection.Stop();
+            
         }
 
         else if (protect == true && !protection.isPlaying)
@@ -73,30 +102,29 @@ public class ConvertToInfector : MonoBehaviour
             protection.Play();
         }
 
-        if (protectTime > 0)
-        {
-            protect = true;
-            protectTime -= Time.deltaTime;
-
-        }
-        else
-        {
-            protect = false;
-        }
         if (useSyringe == true)
         {
-            HaveBuff = false;
-        }
-        if (HaveBuff == false)
-        {
-            useSyringe = false;
-        }
+            if (HaveBuff == true)
+            {
+                HaveBuff = false;
+                useSyringe = false;
+            }
+            else
+            {
+                useSyringe = false;
+                useFail.Play();
+                source.PlayOneShot(protctEnd);
+            }
 
-        if (sleep)
-        {
-            anim.SetBool("sleep", true);
-            StartCoroutine(Sleep());
         }
+       /* if (HaveBuff == false)
+        {
+            
+            if (!useFail.isPlaying && HaveBuff)
+            
+        }*/
+
+
 
         if (usingSkill)
         {
@@ -139,6 +167,7 @@ public class ConvertToInfector : MonoBehaviour
                 useSyringe = false;
                 playerPoint += 10f;
                 heal.Play();
+                source.PlayOneShot(use);
                 Destroy(convert.gameObject);
             }
             else
@@ -146,6 +175,7 @@ public class ConvertToInfector : MonoBehaviour
                 useSyringe = false;
                 playerPoint += 5f;
                 heal.Play();
+                source.PlayOneShot(use);
                 Destroy(convert.gameObject);
             }
             PlayerPrefs.SetFloat("PlayerPoint", playerPoint);
@@ -175,10 +205,6 @@ public class ConvertToInfector : MonoBehaviour
         usingSkill = false;
 
     }
-
-
-
-
 
 }
 
