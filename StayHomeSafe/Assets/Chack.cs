@@ -12,6 +12,8 @@ public class Chack : MonoBehaviour
             item[0].SetActive(false);
             item[1].SetActive(true);
             item[2].SetActive(true);
+            item[3].SetActive(false);
+            item[4].SetActive(true);
         }
         
     }
