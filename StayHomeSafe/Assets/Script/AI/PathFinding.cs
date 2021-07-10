@@ -45,7 +45,7 @@ public class PathFinding : MonoBehaviour
 			{
 
 				NM.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
-				StartCoroutine(time());
+				//StartCoroutine(time());
 
 			}
 			else
